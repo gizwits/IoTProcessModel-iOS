@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTDisconnected">
+            <connections>
+                <outlet property="mainView" destination="yYt-if-jBi" id="qNe-gt-q9j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYt-if-jBi">
+                    <rect key="frame" x="170" y="170" width="260" height="240"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide.png" translatesAutoresizingMaskIntoConstraints="NO" id="atM-z7-J4T">
+                            <rect key="frame" x="9" y="0.0" width="242" height="241"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="242" id="Ycy-Me-a7k"/>
+                                <constraint firstAttribute="height" constant="241" id="gfk-ih-haT"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机还未连接Wi-Fi，请连接上您希望设备接入的Wi-Fi（如您家里的Wi-Fi），连接后请返回APP，将自动跳转到下一步" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqB-uO-3xt">
+                            <rect key="frame" x="15" y="143" width="231" height="77"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="77" id="Ss9-Ja-xYZ"/>
+                                <constraint firstAttribute="width" constant="231" id="ud5-RJ-4PV"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" red="0.41568627450980394" green="0.41568627450980394" blue="0.41568627450980394" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="pqB-uO-3xt" secondAttribute="centerX" id="0Px-8r-UJ6"/>
+                        <constraint firstAttribute="width" constant="260" id="W8Y-2b-cQ0"/>
+                        <constraint firstAttribute="height" constant="240" id="ryC-A5-dx5"/>
+                        <constraint firstItem="pqB-uO-3xt" firstAttribute="top" secondItem="yYt-if-jBi" secondAttribute="top" constant="143" id="tjR-LU-B2l"/>
+                        <constraint firstAttribute="centerX" secondItem="atM-z7-J4T" secondAttribute="centerX" id="wcn-3G-QHF"/>
+                        <constraint firstAttribute="centerY" secondItem="atM-z7-J4T" secondAttribute="centerY" constant="-0.5" id="xh2-gc-XQF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="yYt-if-jBi" secondAttribute="centerX" id="1e4-pN-ILw"/>
+                <constraint firstAttribute="centerY" secondItem="yYt-if-jBi" secondAttribute="centerY" constant="10" id="vHQ-iK-Wew"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="UEW-OT-sse" appends="YES" id="72N-Nx-zaN"/>
+            </connections>
+            <point key="canvasLocation" x="238" y="205"/>
+        </view>
+        <tapGestureRecognizer id="UEW-OT-sse">
+            <connections>
+                <action selector="onTap:" destination="-1" id="pux-Hh-Gk1"/>
+                <outlet property="delegate" destination="-1" id="bUM-1u-2rz"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="guide.png" width="285" height="283"/>
+    </resources>
+</document>

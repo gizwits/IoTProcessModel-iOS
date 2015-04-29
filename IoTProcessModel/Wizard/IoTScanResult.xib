@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTScanResult">
+            <connections>
+                <outlet property="tableView" destination="mF2-3a-zE0" id="wcb-Lr-Udc"/>
+                <outlet property="textNoDev" destination="cGw-fb-end" id="d5s-aJ-Tp5"/>
+                <outlet property="textNoDev2" destination="CbB-vm-4bv" id="VlH-Bd-pac"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已配置的设备" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSu-9l-Y5P">
+                    <rect key="frame" x="20" y="31" width="102" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="82a-fY-MDA"/>
+                        <constraint firstAttribute="width" constant="102" id="XCW-4M-jdd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQw-pF-Fkj">
+                    <rect key="frame" x="12" y="56" width="576" height="1"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="VZt-Kr-o8o"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mF2-3a-zE0">
+                    <rect key="frame" x="0.0" y="60" width="600" height="435"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="XIn-Lj-xMy"/>
+                        <outlet property="delegate" destination="-1" id="8Nh-R2-3vc"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77k-lS-M9S">
+                    <rect key="frame" x="188" y="503" width="225" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="225" id="1XG-MD-mnn"/>
+                        <constraint firstAttribute="height" constant="34" id="BD6-k6-vvl"/>
+                    </constraints>
+                    <state key="normal" title="二维码扫描添加虚拟设备" backgroundImage="button_1.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onScanQRCode:" destination="-1" eventType="touchUpInside" id="xAW-bx-qhu"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的网络中还没有已配置的设备，如果已配置过，" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGw-fb-end">
+                    <rect key="frame" x="168" y="170" width="264" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="264" id="aGD-aL-zt7"/>
+                        <constraint firstAttribute="height" constant="21" id="eXK-vn-vPd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.058823529411764705" green="0.43137254901960786" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请确认手机正连接着相同的Wi-Fi网络" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbB-vm-4bv">
+                    <rect key="frame" x="201" y="191" width="198" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="16S-9n-CFJ"/>
+                        <constraint firstAttribute="width" constant="198" id="KVa-wj-zXr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.058823529409999999" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbe-Gq-qwd">
+                    <rect key="frame" x="188" y="545" width="225" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="225" id="0LU-cF-sxM"/>
+                        <constraint firstAttribute="height" constant="34" id="yxC-mV-qKq"/>
+                    </constraints>
+                    <state key="normal" title="我要配置新设备" backgroundImage="button_1.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onConfigure:" destination="-1" eventType="touchUpInside" id="Kns-jK-Mlw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mF2-3a-zE0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Ah-6A-XuU"/>
+                <constraint firstItem="dSu-9l-Y5P" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="1fa-z6-taq"/>
+                <constraint firstAttribute="bottom" secondItem="zbe-Gq-qwd" secondAttribute="bottom" constant="21" id="4AI-s6-kqf"/>
+                <constraint firstItem="CbB-vm-4bv" firstAttribute="top" secondItem="cGw-fb-end" secondAttribute="bottom" id="8BL-V3-ozc"/>
+                <constraint firstAttribute="centerX" secondItem="cGw-fb-end" secondAttribute="centerX" id="9vh-7e-NOt"/>
+                <constraint firstItem="GQw-pF-Fkj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="12" id="J2C-23-IUA"/>
+                <constraint firstItem="77k-lS-M9S" firstAttribute="top" secondItem="mF2-3a-zE0" secondAttribute="bottom" constant="8" id="NYT-aA-djh"/>
+                <constraint firstItem="dSu-9l-Y5P" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="31" id="Qjj-qJ-AAE"/>
+                <constraint firstItem="cGw-fb-end" firstAttribute="top" secondItem="GQw-pF-Fkj" secondAttribute="bottom" constant="113" id="UXu-9M-Mq5"/>
+                <constraint firstAttribute="trailing" secondItem="mF2-3a-zE0" secondAttribute="trailing" id="VIA-hO-5WP"/>
+                <constraint firstItem="mF2-3a-zE0" firstAttribute="top" secondItem="dSu-9l-Y5P" secondAttribute="bottom" constant="8" id="WPb-MI-IEe"/>
+                <constraint firstItem="zbe-Gq-qwd" firstAttribute="top" secondItem="77k-lS-M9S" secondAttribute="bottom" constant="8" id="Wo0-Nk-zms"/>
+                <constraint firstAttribute="centerX" secondItem="77k-lS-M9S" secondAttribute="centerX" id="dTx-ez-QQ1"/>
+                <constraint firstAttribute="centerX" secondItem="CbB-vm-4bv" secondAttribute="centerX" id="gDv-Ie-1Eu"/>
+                <constraint firstAttribute="trailing" secondItem="GQw-pF-Fkj" secondAttribute="trailing" constant="12" id="hJp-J1-kJO"/>
+                <constraint firstAttribute="centerX" secondItem="zbe-Gq-qwd" secondAttribute="centerX" id="jhx-ga-9TI"/>
+                <constraint firstItem="GQw-pF-Fkj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="56" id="nhx-Ep-RoE"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_1.png" width="191" height="50"/>
+    </resources>
+</document>

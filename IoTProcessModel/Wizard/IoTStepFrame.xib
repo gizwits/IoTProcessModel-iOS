@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTStepFrame">
+            <connections>
+                <outlet property="imgStep" destination="SKa-Mi-78R" id="S6w-1f-Nh3"/>
+                <outlet property="stepContentView" destination="3LM-qT-aMT" id="NRK-c8-AWH"/>
+                <outlet property="stepView" destination="1Lk-8S-gFp" id="yWG-oL-rSE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Lk-8S-gFp">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="82"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pWL-93-lF3">
+                            <rect key="frame" x="6" y="24" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="dwr-ld-Acg"/>
+                                <constraint firstAttribute="height" constant="44" id="ix5-1r-LZx"/>
+                            </constraints>
+                            <state key="normal" image="return_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onCancel:" destination="-1" eventType="touchUpInside" id="Sf4-GH-DJz"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="step.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKa-Mi-78R">
+                            <rect key="frame" x="194" y="26" width="212" height="18"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.016795618412520752" green="0.53637042886241548" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="pWL-93-lF3" firstAttribute="leading" secondItem="1Lk-8S-gFp" secondAttribute="leading" constant="6" id="1oN-g0-kdq"/>
+                        <constraint firstItem="pWL-93-lF3" firstAttribute="top" secondItem="1Lk-8S-gFp" secondAttribute="top" constant="24" id="RPY-jA-1gy"/>
+                        <constraint firstItem="SKa-Mi-78R" firstAttribute="top" secondItem="1Lk-8S-gFp" secondAttribute="top" constant="26" id="XXy-bd-umQ"/>
+                        <constraint firstAttribute="centerX" secondItem="SKa-Mi-78R" secondAttribute="centerX" id="ocR-Qz-ymQ"/>
+                        <constraint firstAttribute="height" constant="82" id="ygn-wL-bt9"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3LM-qT-aMT">
+                    <rect key="frame" x="0.0" y="90" width="600" height="519"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3LM-qT-aMT" secondAttribute="trailing" id="17t-G1-gu4"/>
+                <constraint firstAttribute="bottom" secondItem="3LM-qT-aMT" secondAttribute="bottom" constant="-9" id="33G-ij-tGg"/>
+                <constraint firstAttribute="trailing" secondItem="1Lk-8S-gFp" secondAttribute="trailing" id="b4J-au-eil"/>
+                <constraint firstItem="1Lk-8S-gFp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="lp8-F8-yBF"/>
+                <constraint firstItem="1Lk-8S-gFp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ppS-I0-jfX"/>
+                <constraint firstItem="3LM-qT-aMT" firstAttribute="top" secondItem="1Lk-8S-gFp" secondAttribute="bottom" constant="8" id="prm-35-pni"/>
+                <constraint firstItem="3LM-qT-aMT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uST-jm-DWf"/>
+            </constraints>
+            <point key="canvasLocation" x="362" y="251"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="return_icon.png" width="15" height="25"/>
+        <image name="step.png" width="212" height="18"/>
+    </resources>
+</document>

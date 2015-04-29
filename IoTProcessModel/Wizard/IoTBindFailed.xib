@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTBindFailed">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="配置失败了，让我们看看可能是哪里出了错：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-DG-qTi">
+                    <rect key="frame" x="30" y="70" width="540" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="hsc-G0-m6Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.08235294118" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1、设备是否正常运行？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d88-Pf-ZXh">
+                    <rect key="frame" x="50" y="98" width="180" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="NgP-7H-j5k"/>
+                        <constraint firstAttribute="height" constant="21" id="QXv-UB-5VA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2、Wi-Fi网络是否连接畅顺？" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-yz-7Re">
+                    <rect key="frame" x="50" y="120" width="220" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="gay-FB-2gR"/>
+                        <constraint firstAttribute="height" constant="21" id="tZg-33-b6V"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请按下设备电源，再重新接通电源，再点击重试" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgf-FE-RMI">
+                    <rect key="frame" x="30" y="172" width="540" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="KBd-aI-jlj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.08235294118" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7z9-1e-Jb4">
+                    <rect key="frame" x="191" y="252" width="218" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="218" id="AKL-hC-mlB"/>
+                        <constraint firstAttribute="height" constant="34" id="elA-2b-cPz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="已经重新插拔电源了，我要重试" backgroundImage="button_3.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onRetry:" destination="-1" eventType="touchUpInside" id="kfK-rw-VAD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="7z9-1e-Jb4" firstAttribute="top" secondItem="dgf-FE-RMI" secondAttribute="bottom" constant="38" id="0JH-kW-Zwt"/>
+                <constraint firstAttribute="trailing" secondItem="dgf-FE-RMI" secondAttribute="trailing" constant="30" id="3Yf-nQ-ViY"/>
+                <constraint firstAttribute="centerX" secondItem="dgf-FE-RMI" secondAttribute="centerX" id="7Rc-L7-tzh"/>
+                <constraint firstItem="dgf-FE-RMI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="DtF-zs-fhj"/>
+                <constraint firstItem="dgf-FE-RMI" firstAttribute="top" secondItem="OcL-yz-7Re" secondAttribute="bottom" constant="31" id="FZY-1e-OST"/>
+                <constraint firstItem="OcL-yz-7Re" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="HGV-az-ovl"/>
+                <constraint firstItem="fAt-DG-qTi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="HMe-iC-bjb"/>
+                <constraint firstAttribute="centerX" secondItem="fAt-DG-qTi" secondAttribute="centerX" id="Shd-4O-2XR"/>
+                <constraint firstAttribute="trailing" secondItem="fAt-DG-qTi" secondAttribute="trailing" constant="30" id="VcW-in-y7f"/>
+                <constraint firstItem="d88-Pf-ZXh" firstAttribute="top" secondItem="fAt-DG-qTi" secondAttribute="bottom" constant="14" id="Xuh-eO-NUI"/>
+                <constraint firstItem="OcL-yz-7Re" firstAttribute="top" secondItem="d88-Pf-ZXh" secondAttribute="bottom" constant="1" id="lrg-Jj-lXv"/>
+                <constraint firstItem="d88-Pf-ZXh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="n6o-qO-wcA"/>
+                <constraint firstItem="fAt-DG-qTi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="rAi-DR-J3F"/>
+                <constraint firstAttribute="centerX" secondItem="7z9-1e-Jb4" secondAttribute="centerX" id="yhG-Rv-gQD"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_3.png" width="218" height="34"/>
+    </resources>
+</document>
