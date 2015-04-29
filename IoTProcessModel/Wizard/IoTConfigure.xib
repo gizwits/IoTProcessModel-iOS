@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTConfigure">
+            <connections>
+                <outlet property="btnHelp" destination="DN0-KO-OSF" id="ZKF-lW-DOO"/>
+                <outlet property="btnStartConfigure" destination="1jK-B6-rCX" id="pFg-km-NfL"/>
+                <outlet property="textSummary" destination="UfJ-01-tAD" id="pUd-CL-mri"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UfJ-01-tAD">
+                    <rect key="frame" x="50" y="230" width="500" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="500" id="ShO-bR-UMP"/>
+                        <constraint firstAttribute="height" constant="66" id="hml-sf-gwI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.082352941176470587" green="0.43137254901960786" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jK-B6-rCX">
+                    <rect key="frame" x="238" y="331" width="125" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="hkQ-61-1DW"/>
+                        <constraint firstAttribute="width" constant="125" id="xee-cW-9BN"/>
+                    </constraints>
+                    <state key="normal" title="开始配置" backgroundImage="button_1.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onStartConfigure:" destination="-1" eventType="touchUpInside" id="xuh-ah-vPO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN0-KO-OSF">
+                    <rect key="frame" x="170" y="331" width="260" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="5Dv-0p-Utq"/>
+                        <constraint firstAttribute="height" constant="34" id="W40-Rn-0kZ"/>
+                    </constraints>
+                    <state key="normal" title="已按下按键，但界面一直没有跳转？" backgroundImage="button_1.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onHelp:" destination="-1" eventType="touchUpInside" id="bN2-di-yca"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="guide-36.png" translatesAutoresizingMaskIntoConstraints="NO" id="acb-Al-Si2">
+                    <rect key="frame" x="196" y="75" width="209" height="97"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="209" id="a2M-3a-LTK"/>
+                        <constraint firstAttribute="height" constant="97" id="zDf-Pf-RKY"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="acb-Al-Si2" secondAttribute="centerX" id="F21-g0-0xp"/>
+                <constraint firstItem="1jK-B6-rCX" firstAttribute="top" secondItem="UfJ-01-tAD" secondAttribute="bottom" constant="35" id="HZg-C7-fou"/>
+                <constraint firstAttribute="centerX" secondItem="UfJ-01-tAD" secondAttribute="centerX" id="KMv-jU-gM4"/>
+                <constraint firstAttribute="centerX" secondItem="DN0-KO-OSF" secondAttribute="centerX" id="Mwq-3O-WrX"/>
+                <constraint firstItem="UfJ-01-tAD" firstAttribute="top" secondItem="acb-Al-Si2" secondAttribute="bottom" constant="58" id="P6a-ML-Dhj"/>
+                <constraint firstItem="acb-Al-Si2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="75" id="dcC-Ys-flX"/>
+                <constraint firstAttribute="centerX" secondItem="1jK-B6-rCX" secondAttribute="centerX" id="dcX-qO-v5I"/>
+                <constraint firstItem="DN0-KO-OSF" firstAttribute="top" secondItem="UfJ-01-tAD" secondAttribute="bottom" constant="35" id="oNt-9N-vKI"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_1.png" width="191" height="50"/>
+        <image name="guide-36.png" width="281" height="130"/>
+    </resources>
+</document>

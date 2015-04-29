@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTWaitForConfigure">
+            <connections>
+                <outlet property="textTime" destination="I7t-XF-exO" id="Z0L-gS-81I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="vpP-Je-EGb">
+                    <rect key="frame" x="273" y="174" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="waQ-y3-CGj"/>
+                        <constraint firstAttribute="height" constant="20" id="wiq-qF-3QP"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="waQ-y3-CGj"/>
+                        </mask>
+                    </variation>
+                </activityIndicatorView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7t-XF-exO">
+                    <rect key="frame" x="301" y="162" width="42" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="1gP-FL-bJH"/>
+                        <constraint firstAttribute="height" constant="43" id="Fix-1J-A2r"/>
+                        <constraint firstAttribute="width" constant="42" id="qNw-Na-oVZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="36"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="qNw-Na-oVZ"/>
+                        </mask>
+                    </variation>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设备配置中，请耐心等待" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4r-f5-JGe">
+                    <rect key="frame" x="106" y="112" width="388" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="388" id="blR-P3-5Mc"/>
+                        <constraint firstAttribute="height" constant="21" id="eML-DH-AJI"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.08235294118" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="I7t-XF-exO" firstAttribute="top" secondItem="k4r-f5-JGe" secondAttribute="bottom" constant="29" id="2ea-1W-YdG"/>
+                <constraint firstAttribute="centerX" secondItem="vpP-Je-EGb" secondAttribute="centerX" constant="17" id="5pB-up-2NZ"/>
+                <constraint firstItem="I7t-XF-exO" firstAttribute="top" secondItem="k4r-f5-JGe" secondAttribute="bottom" constant="29" id="7iX-Zs-WqR"/>
+                <constraint firstItem="k4r-f5-JGe" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="8OB-Qn-ICI"/>
+                <constraint firstItem="vpP-Je-EGb" firstAttribute="top" secondItem="k4r-f5-JGe" secondAttribute="bottom" constant="41" id="apM-9y-pGh"/>
+                <constraint firstAttribute="centerX" secondItem="k4r-f5-JGe" secondAttribute="centerX" id="bnS-FY-ojB"/>
+                <constraint firstAttribute="centerX" secondItem="I7t-XF-exO" secondAttribute="centerX" id="fky-Au-Qna"/>
+                <constraint firstItem="I7t-XF-exO" firstAttribute="leading" secondItem="vpP-Je-EGb" secondAttribute="trailing" constant="8" symbolic="YES" id="iKg-bR-hkO"/>
+                <constraint firstAttribute="centerX" secondItem="vpP-Je-EGb" secondAttribute="centerX" id="l9W-Qv-gAw"/>
+                <constraint firstItem="I7t-XF-exO" firstAttribute="leading" secondItem="vpP-Je-EGb" secondAttribute="trailing" constant="8" id="osH-Fr-8fX"/>
+                <constraint firstItem="I7t-XF-exO" firstAttribute="top" secondItem="k4r-f5-JGe" secondAttribute="bottom" constant="29" id="rA7-7Y-YME"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="l9W-Qv-gAw"/>
+                    <exclude reference="7iX-Zs-WqR"/>
+                    <exclude reference="fky-Au-Qna"/>
+                    <exclude reference="osH-Fr-8fX"/>
+                    <exclude reference="rA7-7Y-YME"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

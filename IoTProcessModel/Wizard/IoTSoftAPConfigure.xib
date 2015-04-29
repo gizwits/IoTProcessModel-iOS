@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTSoftAPConfigure">
+            <connections>
+                <outlet property="textPass" destination="mAi-E4-e0A" id="IU6-bg-BcE"/>
+                <outlet property="textWifiName" destination="t8F-6G-j4u" id="wQF-Of-Dqd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-Fi名称：xxxxx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8F-6G-j4u">
+                    <rect key="frame" x="50" y="113" width="500" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="ZtX-YT-HfR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.08235294118" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wi-Fi密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mAi-E4-e0A" customClass="IoTPasswordField">
+                    <rect key="frame" x="50" y="155" width="500" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="eKq-B3-JnP"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DwA-uw-V7B">
+                    <rect key="frame" x="238" y="225" width="125" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="5dd-bd-H2V"/>
+                        <constraint firstAttribute="width" constant="125" id="eix-jv-NbR"/>
+                    </constraints>
+                    <state key="normal" title="连接网络" backgroundImage="button_1.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onConnect:" destination="-1" eventType="touchUpInside" id="S9O-lj-w21"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="t8F-6G-j4u" secondAttribute="centerX" id="9ea-Mc-6Hy"/>
+                <constraint firstItem="DwA-uw-V7B" firstAttribute="top" secondItem="mAi-E4-e0A" secondAttribute="bottom" constant="40" id="9q0-bd-PeK"/>
+                <constraint firstItem="mAi-E4-e0A" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="HB7-Cn-Kp1"/>
+                <constraint firstItem="t8F-6G-j4u" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="113" id="LM6-vE-tQF"/>
+                <constraint firstAttribute="centerX" secondItem="DwA-uw-V7B" secondAttribute="centerX" id="Npa-lw-BaL"/>
+                <constraint firstItem="t8F-6G-j4u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="OOD-eS-CRG"/>
+                <constraint firstAttribute="centerX" secondItem="mAi-E4-e0A" secondAttribute="centerX" id="TDS-bq-u2T"/>
+                <constraint firstAttribute="trailing" secondItem="t8F-6G-j4u" secondAttribute="trailing" constant="50" id="YJC-Uw-Pkf"/>
+                <constraint firstAttribute="trailing" secondItem="mAi-E4-e0A" secondAttribute="trailing" constant="50" id="dde-d1-w5X"/>
+                <constraint firstItem="mAi-E4-e0A" firstAttribute="top" secondItem="t8F-6G-j4u" secondAttribute="bottom" constant="21" id="puZ-bL-rnb"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="7zd-EX-yxK" appends="YES" id="Brf-DD-7Cv"/>
+            </connections>
+        </view>
+        <tapGestureRecognizer id="7zd-EX-yxK">
+            <connections>
+                <action selector="onTap:" destination="-1" id="NeT-a6-k0W"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="button_1.png" width="125" height="34"/>
+    </resources>
+</document>

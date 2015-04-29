@@ -1,0 +1,1156 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		EEE9F61B1A494D080042F676 /* IoTProcessModel-library */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = EEE9F61E1A494D080042F676 /* Build configuration list for PBXAggregateTarget "IoTProcessModel-library" */;
+			buildPhases = (
+				EEE9F61F1A494D120042F676 /* ShellScript */,
+			);
+			dependencies = (
+				EEE9F6271A4958820042F676 /* PBXTargetDependency */,
+			);
+			name = "IoTProcessModel-library";
+			productName = "IoTProcessModel-library";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		EE16C9A61A1EF4850009FB4E /* IoTProcessModel.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EE16C9A51A1EF4850009FB4E /* IoTProcessModel.h */; };
+		EE16C9A81A1EF4850009FB4E /* IoTProcessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16C9A71A1EF4850009FB4E /* IoTProcessModel.m */; };
+		EE16CA651A1F0E3D0009FB4E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16C9E31A1EF4BE0009FB4E /* MBProgressHUD.m */; };
+		EE16CA661A1F0E500009FB4E /* IoTWifiUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16CA361A1EF4BE0009FB4E /* IoTWifiUtil.m */; };
+		EE53F4DD1A2315E800E8266E /* IoTLogin.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EECD152D1A230FB300C650BD /* IoTLogin.h */; };
+		EE53F4DE1A2315F800E8266E /* IoTSetWifi.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14F21A230BB500C650BD /* IoTSetWifi.xib */; };
+		EE53F4DF1A2315F800E8266E /* IoTSoftAPConfigure.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14F81A230BF600C650BD /* IoTSoftAPConfigure.xib */; };
+		EE53F4E11A2315F800E8266E /* IoTConfigureResult.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD15021A230C8000C650BD /* IoTConfigureResult.xib */; };
+		EE53F4E21A2315F800E8266E /* IoTAddDevice.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14D81A230A5900C650BD /* IoTAddDevice.xib */; };
+		EE53F4E31A2315F800E8266E /* IoTConfigure.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14E21A230A9E00C650BD /* IoTConfigure.xib */; };
+		EE53F4E41A2315F800E8266E /* IoTConfigureFailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14ED1A230B3300C650BD /* IoTConfigureFailed.xib */; };
+		EE53F4E61A2315F800E8266E /* IoTScanResult.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD14D31A230A0000C650BD /* IoTScanResult.xib */; };
+		EE53F4E71A2315F800E8266E /* IoTRegisterByPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD15341A23114F00C650BD /* IoTRegisterByPhone.xib */; };
+		EE53F4E81A2315F800E8266E /* IoTRegisterByMail.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD15391A23116000C650BD /* IoTRegisterByMail.xib */; };
+		EE53F4E91A2315F800E8266E /* IoTLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = EECD152F1A230FB300C650BD /* IoTLogin.xib */; };
+		EE53F5081A23338E00E8266E /* IoTStepFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F5061A23338E00E8266E /* IoTStepFrame.m */; };
+		EE53F50A1A23343500E8266E /* IoTStepFrame.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53F5071A23338E00E8266E /* IoTStepFrame.xib */; };
+		EE53F5151A245E7D00E8266E /* IoTDeviceList.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53F5131A245E0F00E8266E /* IoTDeviceList.xib */; };
+		EE5B91A41A4D078300E9210F /* IoTPasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5B91A31A4D078300E9210F /* IoTPasswordField.m */; };
+		EE5C0E9C1A4026710019CFDD /* SSPullToRefreshDefaultContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0E951A4026710019CFDD /* SSPullToRefreshDefaultContentView.m */; };
+		EE5C0E9D1A4026710019CFDD /* SSPullToRefreshSimpleContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0E971A4026710019CFDD /* SSPullToRefreshSimpleContentView.m */; };
+		EE5C0E9E1A4026710019CFDD /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0E991A4026710019CFDD /* SSPullToRefreshView.m */; };
+		EE65FDD51A2C164100F3A549 /* IoTBindFailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD4A011A272D1F00846720 /* IoTBindFailed.xib */; };
+		EE65FDD61A2C164100F3A549 /* IoTWaitForConfigure.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD49FC1A272BDB00846720 /* IoTWaitForConfigure.xib */; };
+		EE6A97FE1A53C1F10038E4A5 /* XPGWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */; };
+		EE7691AD1A43F48A00B682DD /* button_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691691A43F45500B682DD /* button_1@2x.png */; };
+		EE7691AE1A43F48A00B682DD /* button_2_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916A1A43F45500B682DD /* button_2_1@2x.png */; };
+		EE7691AF1A43F48A00B682DD /* button_2_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916B1A43F45500B682DD /* button_2_2@2x.png */; };
+		EE7691B01A43F48A00B682DD /* button_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916C1A43F45500B682DD /* button_3@2x.png */; };
+		EE7691B11A43F48A00B682DD /* return_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916D1A43F45500B682DD /* return_icon@2x.png */; };
+		EE7691B21A43F48A00B682DD /* switch_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916E1A43F45500B682DD /* switch_off@2x.png */; };
+		EE7691B31A43F48A00B682DD /* switch_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916F1A43F45500B682DD /* switch_on@2x.png */; };
+		EE7691B41A43F48A00B682DD /* failure@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691721A43F45500B682DD /* failure@2x.png */; };
+		EE7691B51A43F48A00B682DD /* guide-36@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691731A43F45500B682DD /* guide-36@2x.png */; };
+		EE7691B61A43F48A00B682DD /* guide-38@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691741A43F45500B682DD /* guide-38@2x.png */; };
+		EE7691B71A43F48A00B682DD /* guide@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691751A43F45500B682DD /* guide@2x.png */; };
+		EE7691B81A43F48A00B682DD /* step-08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691761A43F45500B682DD /* step-08@2x.png */; };
+		EE7691B91A43F48A00B682DD /* step-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691771A43F45500B682DD /* step-13@2x.png */; };
+		EE7691BA1A43F48A00B682DD /* step-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691781A43F45500B682DD /* step-15@2x.png */; };
+		EE7691BB1A43F48A00B682DD /* step-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691791A43F45500B682DD /* step-17@2x.png */; };
+		EE7691BC1A43F48A00B682DD /* step-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76917A1A43F45500B682DD /* step-18@2x.png */; };
+		EE7691BD1A43F48A00B682DD /* step@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76917B1A43F45500B682DD /* step@2x.png */; };
+		EE7691BE1A43F48A00B682DD /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76917C1A43F45500B682DD /* success@2x.png */; };
+		EE7691BF1A43F48A00B682DD /* device-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76917F1A43F45500B682DD /* device-29@2x.png */; };
+		EE7691C01A43F48A00B682DD /* device-37@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691801A43F45500B682DD /* device-37@2x.png */; };
+		EE7691C11A43F48A00B682DD /* device_list-31@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691811A43F45500B682DD /* device_list-31@2x.png */; };
+		EE7691C21A43F48A00B682DD /* device_list-34@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691821A43F45500B682DD /* device_list-34@2x.png */; };
+		EE7691C31A43F48A00B682DD /* device_list_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691831A43F45500B682DD /* device_list_box@2x.png */; };
+		EE7691C41A43F48A00B682DD /* logout_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691841A43F45500B682DD /* logout_icon@2x.png */; };
+		EE7691C71A43F48A00B682DD /* login_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691891A43F45500B682DD /* login_button@2x.png */; };
+		EE7691C81A43F48A00B682DD /* login_icon-06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76918A1A43F45500B682DD /* login_icon-06@2x.png */; };
+		EE7691C91A43F48A00B682DD /* login_icon-07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76918B1A43F45500B682DD /* login_icon-07@2x.png */; };
+		EE7691CA1A43F48A00B682DD /* login_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76918C1A43F45500B682DD /* login_icon@2x.png */; };
+		EE7691CB1A43F48A00B682DD /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76918D1A43F45500B682DD /* logo@2x.png */; };
+		EECD14D41A230A0000C650BD /* IoTScanResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14D21A230A0000C650BD /* IoTScanResult.m */; };
+		EECD14D91A230A5900C650BD /* IoTAddDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14D71A230A5900C650BD /* IoTAddDevice.m */; };
+		EECD14E31A230A9E00C650BD /* IoTConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14E11A230A9E00C650BD /* IoTConfigure.m */; };
+		EECD14EE1A230B3300C650BD /* IoTConfigureFailed.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14EC1A230B3300C650BD /* IoTConfigureFailed.m */; };
+		EECD14F31A230BB500C650BD /* IoTSetWifi.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14F11A230BB500C650BD /* IoTSetWifi.m */; };
+		EECD14F91A230BF600C650BD /* IoTSoftAPConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD14F71A230BF600C650BD /* IoTSoftAPConfigure.m */; };
+		EECD15031A230C8000C650BD /* IoTConfigureResult.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD15011A230C8000C650BD /* IoTConfigureResult.m */; };
+		EECD15281A230DC700C650BD /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EECD15221A230DC700C650BD /* libzbar.a */; };
+		EECD15301A230FB300C650BD /* IoTLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD152E1A230FB300C650BD /* IoTLogin.m */; };
+		EECD15351A23114F00C650BD /* IoTRegisterByPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD15331A23114F00C650BD /* IoTRegisterByPhone.m */; };
+		EECD153A1A23116000C650BD /* IoTRegisterByMail.m in Sources */ = {isa = PBXBuildFile; fileRef = EECD15381A23116000C650BD /* IoTRegisterByMail.m */; };
+		EEE9F6171A4926040042F676 /* IoTDisconnected.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE9F6151A4926040042F676 /* IoTDisconnected.m */; };
+		EEE9F6191A493E920042F676 /* IoTDisconnected.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE9F6161A4926040042F676 /* IoTDisconnected.xib */; };
+		EEF256451A1F202F00FAA268 /* IoTDeviceList.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256431A1F202F00FAA268 /* IoTDeviceList.m */; };
+		EEF256631A1F20C100FAA268 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256481A1F208F00FAA268 /* AFHTTPRequestOperation.m */; };
+		EEF256641A1F20C100FAA268 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2564A1A1F208F00FAA268 /* AFHTTPRequestOperationManager.m */; };
+		EEF256651A1F20C100FAA268 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2564C1A1F208F00FAA268 /* AFHTTPSessionManager.m */; };
+		EEF256661A1F20C100FAA268 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF2564F1A1F208F00FAA268 /* AFNetworkReachabilityManager.m */; };
+		EEF256671A1F20C100FAA268 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256511A1F208F00FAA268 /* AFSecurityPolicy.m */; };
+		EEF256681A1F20C100FAA268 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256531A1F208F00FAA268 /* AFURLConnectionOperation.m */; };
+		EEF256691A1F20C100FAA268 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256551A1F208F00FAA268 /* AFURLRequestSerialization.m */; };
+		EEF2566A1A1F20C100FAA268 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256571A1F208F00FAA268 /* AFURLResponseSerialization.m */; };
+		EEF2566B1A1F20C100FAA268 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF256591A1F208F00FAA268 /* AFURLSessionManager.m */; };
+		EEF2567D1A1F29B100FAA268 /* IoTDeviceList.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EEF256421A1F202F00FAA268 /* IoTDeviceList.h */; };
+		EEF45FBF1A2C7080002FE2AA /* IoTForgetPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = EEF45FBD1A2C7080002FE2AA /* IoTForgetPassword.m */; };
+		EEF45FC11A2C70D8002FE2AA /* IoTForgetPassword.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF45FBE1A2C7080002FE2AA /* IoTForgetPassword.xib */; };
+		EEFD49FD1A272BDB00846720 /* IoTWaitForConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD49FB1A272BDB00846720 /* IoTWaitForConfigure.m */; };
+		EEFD4A021A272D1F00846720 /* IoTBindFailed.m in Sources */ = {isa = PBXBuildFile; fileRef = EEFD4A001A272D1F00846720 /* IoTBindFailed.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE5D35401A305368001C1E09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE16C99A1A1EF4850009FB4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EEF256341A1F1FBB00FAA268;
+			remoteInfo = IoTProcessModule;
+		};
+		EEE9F6261A4958820042F676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE16C99A1A1EF4850009FB4E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE16C9A11A1EF4850009FB4E;
+			remoteInfo = IoTProcessModel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EE16C9A01A1EF4850009FB4E /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				EE53F4DD1A2315E800E8266E /* IoTLogin.h in Copy Files */,
+				EEF2567D1A1F29B100FAA268 /* IoTDeviceList.h in Copy Files */,
+				EE16C9A61A1EF4850009FB4E /* IoTProcessModel.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EE16C9A21A1EF4850009FB4E /* libIoTProcessModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIoTProcessModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE16C9A51A1EF4850009FB4E /* IoTProcessModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoTProcessModel.h; sourceTree = "<group>"; };
+		EE16C9A71A1EF4850009FB4E /* IoTProcessModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IoTProcessModel.m; sourceTree = "<group>"; };
+		EE16C9E21A1EF4BE0009FB4E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EE16C9E31A1EF4BE0009FB4E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		EE16CA351A1EF4BE0009FB4E /* IoTWifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTWifiUtil.h; sourceTree = "<group>"; };
+		EE16CA361A1EF4BE0009FB4E /* IoTWifiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTWifiUtil.m; sourceTree = "<group>"; };
+		EE16CA4E1A1EF4C50009FB4E /* IoTDefinitions.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IoTDefinitions.pch; path = ../IoTProcessModel/IoTDefinitions.pch; sourceTree = "<group>"; };
+		EE53F4EA1A23171200E8266E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
+		EE53F5051A23338E00E8266E /* IoTStepFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTStepFrame.h; sourceTree = "<group>"; };
+		EE53F5061A23338E00E8266E /* IoTStepFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTStepFrame.m; sourceTree = "<group>"; };
+		EE53F5071A23338E00E8266E /* IoTStepFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTStepFrame.xib; sourceTree = "<group>"; };
+		EE53F5131A245E0F00E8266E /* IoTDeviceList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTDeviceList.xib; sourceTree = "<group>"; };
+		EE5B91A21A4D078300E9210F /* IoTPasswordField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTPasswordField.h; sourceTree = "<group>"; };
+		EE5B91A31A4D078300E9210F /* IoTPasswordField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTPasswordField.m; sourceTree = "<group>"; };
+		EE5C0E901A4026710019CFDD /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		EE5C0E931A4026710019CFDD /* SSPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefresh.h; sourceTree = "<group>"; };
+		EE5C0E941A4026710019CFDD /* SSPullToRefreshDefaultContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshDefaultContentView.h; sourceTree = "<group>"; };
+		EE5C0E951A4026710019CFDD /* SSPullToRefreshDefaultContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshDefaultContentView.m; sourceTree = "<group>"; };
+		EE5C0E961A4026710019CFDD /* SSPullToRefreshSimpleContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshSimpleContentView.h; sourceTree = "<group>"; };
+		EE5C0E971A4026710019CFDD /* SSPullToRefreshSimpleContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshSimpleContentView.m; sourceTree = "<group>"; };
+		EE5C0E981A4026710019CFDD /* SSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshView.h; sourceTree = "<group>"; };
+		EE5C0E991A4026710019CFDD /* SSPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshView.m; sourceTree = "<group>"; };
+		EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XPGWifiSDK.framework; sourceTree = "<group>"; };
+		EE7691691A43F45500B682DD /* button_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_1@2x.png"; sourceTree = "<group>"; };
+		EE76916A1A43F45500B682DD /* button_2_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_2_1@2x.png"; sourceTree = "<group>"; };
+		EE76916B1A43F45500B682DD /* button_2_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_2_2@2x.png"; sourceTree = "<group>"; };
+		EE76916C1A43F45500B682DD /* button_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_3@2x.png"; sourceTree = "<group>"; };
+		EE76916D1A43F45500B682DD /* return_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "return_icon@2x.png"; sourceTree = "<group>"; };
+		EE76916E1A43F45500B682DD /* switch_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_off@2x.png"; sourceTree = "<group>"; };
+		EE76916F1A43F45500B682DD /* switch_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "switch_on@2x.png"; sourceTree = "<group>"; };
+		EE7691721A43F45500B682DD /* failure@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "failure@2x.png"; sourceTree = "<group>"; };
+		EE7691731A43F45500B682DD /* guide-36@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-36@2x.png"; sourceTree = "<group>"; };
+		EE7691741A43F45500B682DD /* guide-38@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide-38@2x.png"; sourceTree = "<group>"; };
+		EE7691751A43F45500B682DD /* guide@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide@2x.png"; sourceTree = "<group>"; };
+		EE7691761A43F45500B682DD /* step-08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step-08@2x.png"; sourceTree = "<group>"; };
+		EE7691771A43F45500B682DD /* step-13@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step-13@2x.png"; sourceTree = "<group>"; };
+		EE7691781A43F45500B682DD /* step-15@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step-15@2x.png"; sourceTree = "<group>"; };
+		EE7691791A43F45500B682DD /* step-17@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step-17@2x.png"; sourceTree = "<group>"; };
+		EE76917A1A43F45500B682DD /* step-18@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step-18@2x.png"; sourceTree = "<group>"; };
+		EE76917B1A43F45500B682DD /* step@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "step@2x.png"; sourceTree = "<group>"; };
+		EE76917C1A43F45500B682DD /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@2x.png"; sourceTree = "<group>"; };
+		EE76917F1A43F45500B682DD /* device-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device-29@2x.png"; sourceTree = "<group>"; };
+		EE7691801A43F45500B682DD /* device-37@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device-37@2x.png"; sourceTree = "<group>"; };
+		EE7691811A43F45500B682DD /* device_list-31@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device_list-31@2x.png"; sourceTree = "<group>"; };
+		EE7691821A43F45500B682DD /* device_list-34@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device_list-34@2x.png"; sourceTree = "<group>"; };
+		EE7691831A43F45500B682DD /* device_list_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "device_list_box@2x.png"; sourceTree = "<group>"; };
+		EE7691841A43F45500B682DD /* logout_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logout_icon@2x.png"; sourceTree = "<group>"; };
+		EE7691891A43F45500B682DD /* login_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_button@2x.png"; sourceTree = "<group>"; };
+		EE76918A1A43F45500B682DD /* login_icon-06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon-06@2x.png"; sourceTree = "<group>"; };
+		EE76918B1A43F45500B682DD /* login_icon-07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon-07@2x.png"; sourceTree = "<group>"; };
+		EE76918C1A43F45500B682DD /* login_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login_icon@2x.png"; sourceTree = "<group>"; };
+		EE76918D1A43F45500B682DD /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		EECD14D11A230A0000C650BD /* IoTScanResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTScanResult.h; sourceTree = "<group>"; };
+		EECD14D21A230A0000C650BD /* IoTScanResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTScanResult.m; sourceTree = "<group>"; };
+		EECD14D31A230A0000C650BD /* IoTScanResult.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTScanResult.xib; sourceTree = "<group>"; };
+		EECD14D61A230A5900C650BD /* IoTAddDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTAddDevice.h; sourceTree = "<group>"; };
+		EECD14D71A230A5900C650BD /* IoTAddDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTAddDevice.m; sourceTree = "<group>"; };
+		EECD14D81A230A5900C650BD /* IoTAddDevice.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTAddDevice.xib; sourceTree = "<group>"; };
+		EECD14E01A230A9E00C650BD /* IoTConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTConfigure.h; sourceTree = "<group>"; };
+		EECD14E11A230A9E00C650BD /* IoTConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTConfigure.m; sourceTree = "<group>"; };
+		EECD14E21A230A9E00C650BD /* IoTConfigure.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTConfigure.xib; sourceTree = "<group>"; };
+		EECD14EB1A230B3300C650BD /* IoTConfigureFailed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTConfigureFailed.h; sourceTree = "<group>"; };
+		EECD14EC1A230B3300C650BD /* IoTConfigureFailed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTConfigureFailed.m; sourceTree = "<group>"; };
+		EECD14ED1A230B3300C650BD /* IoTConfigureFailed.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTConfigureFailed.xib; sourceTree = "<group>"; };
+		EECD14F01A230BB500C650BD /* IoTSetWifi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTSetWifi.h; sourceTree = "<group>"; };
+		EECD14F11A230BB500C650BD /* IoTSetWifi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTSetWifi.m; sourceTree = "<group>"; };
+		EECD14F21A230BB500C650BD /* IoTSetWifi.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTSetWifi.xib; sourceTree = "<group>"; };
+		EECD14F61A230BF600C650BD /* IoTSoftAPConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTSoftAPConfigure.h; sourceTree = "<group>"; };
+		EECD14F71A230BF600C650BD /* IoTSoftAPConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTSoftAPConfigure.m; sourceTree = "<group>"; };
+		EECD14F81A230BF600C650BD /* IoTSoftAPConfigure.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTSoftAPConfigure.xib; sourceTree = "<group>"; };
+		EECD15001A230C8000C650BD /* IoTConfigureResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTConfigureResult.h; sourceTree = "<group>"; };
+		EECD15011A230C8000C650BD /* IoTConfigureResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTConfigureResult.m; sourceTree = "<group>"; };
+		EECD15021A230C8000C650BD /* IoTConfigureResult.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTConfigureResult.xib; sourceTree = "<group>"; };
+		EECD150E1A230DC700C650BD /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		EECD150F1A230DC700C650BD /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		EECD15101A230DC700C650BD /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		EECD15111A230DC700C650BD /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		EECD15121A230DC700C650BD /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		EECD15131A230DC700C650BD /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		EECD15141A230DC700C650BD /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		EECD15151A230DC700C650BD /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		EECD15161A230DC700C650BD /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		EECD15171A230DC700C650BD /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		EECD15181A230DC700C650BD /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		EECD15191A230DC700C650BD /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		EECD151A1A230DC700C650BD /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		EECD151B1A230DC700C650BD /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		EECD151C1A230DC700C650BD /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		EECD151D1A230DC700C650BD /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		EECD151E1A230DC700C650BD /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		EECD151F1A230DC700C650BD /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		EECD15201A230DC700C650BD /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		EECD15211A230DC700C650BD /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		EECD15221A230DC700C650BD /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		EECD15241A230DC700C650BD /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		EECD15251A230DC700C650BD /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		EECD15261A230DC700C650BD /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		EECD15271A230DC700C650BD /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		EECD152D1A230FB300C650BD /* IoTLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTLogin.h; sourceTree = "<group>"; };
+		EECD152E1A230FB300C650BD /* IoTLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTLogin.m; sourceTree = "<group>"; };
+		EECD152F1A230FB300C650BD /* IoTLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTLogin.xib; sourceTree = "<group>"; };
+		EECD15321A23114F00C650BD /* IoTRegisterByPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTRegisterByPhone.h; sourceTree = "<group>"; };
+		EECD15331A23114F00C650BD /* IoTRegisterByPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTRegisterByPhone.m; sourceTree = "<group>"; };
+		EECD15341A23114F00C650BD /* IoTRegisterByPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTRegisterByPhone.xib; sourceTree = "<group>"; };
+		EECD15371A23116000C650BD /* IoTRegisterByMail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTRegisterByMail.h; sourceTree = "<group>"; };
+		EECD15381A23116000C650BD /* IoTRegisterByMail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTRegisterByMail.m; sourceTree = "<group>"; };
+		EECD15391A23116000C650BD /* IoTRegisterByMail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTRegisterByMail.xib; sourceTree = "<group>"; };
+		EEE9F6141A4926040042F676 /* IoTDisconnected.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTDisconnected.h; sourceTree = "<group>"; };
+		EEE9F6151A4926040042F676 /* IoTDisconnected.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTDisconnected.m; sourceTree = "<group>"; };
+		EEE9F6161A4926040042F676 /* IoTDisconnected.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTDisconnected.xib; sourceTree = "<group>"; };
+		EEF256281A1F1B7F00FAA268 /* IoTProcessModel+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IoTProcessModel+Private.h"; sourceTree = "<group>"; };
+		EEF256351A1F1FBB00FAA268 /* IoTProcessModule.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IoTProcessModule.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEF256381A1F1FBB00FAA268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEF256421A1F202F00FAA268 /* IoTDeviceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTDeviceList.h; sourceTree = "<group>"; };
+		EEF256431A1F202F00FAA268 /* IoTDeviceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTDeviceList.m; sourceTree = "<group>"; };
+		EEF256471A1F208F00FAA268 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		EEF256481A1F208F00FAA268 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		EEF256491A1F208F00FAA268 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		EEF2564A1A1F208F00FAA268 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		EEF2564B1A1F208F00FAA268 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		EEF2564C1A1F208F00FAA268 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		EEF2564D1A1F208F00FAA268 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		EEF2564E1A1F208F00FAA268 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		EEF2564F1A1F208F00FAA268 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		EEF256501A1F208F00FAA268 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		EEF256511A1F208F00FAA268 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		EEF256521A1F208F00FAA268 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		EEF256531A1F208F00FAA268 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		EEF256541A1F208F00FAA268 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		EEF256551A1F208F00FAA268 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		EEF256561A1F208F00FAA268 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		EEF256571A1F208F00FAA268 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		EEF256581A1F208F00FAA268 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		EEF256591A1F208F00FAA268 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		EEF45FBC1A2C7080002FE2AA /* IoTForgetPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTForgetPassword.h; sourceTree = "<group>"; };
+		EEF45FBD1A2C7080002FE2AA /* IoTForgetPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTForgetPassword.m; sourceTree = "<group>"; };
+		EEF45FBE1A2C7080002FE2AA /* IoTForgetPassword.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTForgetPassword.xib; sourceTree = "<group>"; };
+		EEFD49FA1A272BDB00846720 /* IoTWaitForConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTWaitForConfigure.h; sourceTree = "<group>"; };
+		EEFD49FB1A272BDB00846720 /* IoTWaitForConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTWaitForConfigure.m; sourceTree = "<group>"; };
+		EEFD49FC1A272BDB00846720 /* IoTWaitForConfigure.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTWaitForConfigure.xib; sourceTree = "<group>"; };
+		EEFD49FF1A272D1F00846720 /* IoTBindFailed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTBindFailed.h; sourceTree = "<group>"; };
+		EEFD4A001A272D1F00846720 /* IoTBindFailed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTBindFailed.m; sourceTree = "<group>"; };
+		EEFD4A011A272D1F00846720 /* IoTBindFailed.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTBindFailed.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE16C99F1A1EF4850009FB4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE6A97FE1A53C1F10038E4A5 /* XPGWifiSDK.framework in Frameworks */,
+				EECD15281A230DC700C650BD /* libzbar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEF256321A1F1FBB00FAA268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE16C9991A1EF4850009FB4E = {
+			isa = PBXGroup;
+			children = (
+				EE16C9A41A1EF4850009FB4E /* IoTProcessModel */,
+				EEF256361A1F1FBB00FAA268 /* IoTProcessModule */,
+				EE16C9A31A1EF4850009FB4E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE16C9A31A1EF4850009FB4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE16C9A21A1EF4850009FB4E /* libIoTProcessModel.a */,
+				EEF256351A1F1FBB00FAA268 /* IoTProcessModule.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE16C9A41A1EF4850009FB4E /* IoTProcessModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE53F4EA1A23171200E8266E /* README */,
+				EE5B91A11A4D078300E9210F /* Common */,
+				EE3D0F9F1A2FFCB6004CD54A /* Images */,
+				EECD14C71A23095500C650BD /* Wizard */,
+				EE16C9BC1A1EF4BE0009FB4E /* Devices */,
+				EE16C9C91A1EF4BE0009FB4E /* UserAccounts */,
+				EE16C9CA1A1EF4BE0009FB4E /* Utils */,
+				EE16C9A51A1EF4850009FB4E /* IoTProcessModel.h */,
+				EEF256281A1F1B7F00FAA268 /* IoTProcessModel+Private.h */,
+				EE16C9A71A1EF4850009FB4E /* IoTProcessModel.m */,
+			);
+			path = IoTProcessModel;
+			sourceTree = "<group>";
+		};
+		EE16C9BC1A1EF4BE0009FB4E /* Devices */ = {
+			isa = PBXGroup;
+			children = (
+				EEF256421A1F202F00FAA268 /* IoTDeviceList.h */,
+				EEF256431A1F202F00FAA268 /* IoTDeviceList.m */,
+				EE53F5131A245E0F00E8266E /* IoTDeviceList.xib */,
+			);
+			path = Devices;
+			sourceTree = "<group>";
+		};
+		EE16C9C91A1EF4BE0009FB4E /* UserAccounts */ = {
+			isa = PBXGroup;
+			children = (
+				EECD152D1A230FB300C650BD /* IoTLogin.h */,
+				EECD152E1A230FB300C650BD /* IoTLogin.m */,
+				EECD152F1A230FB300C650BD /* IoTLogin.xib */,
+				EEF45FBC1A2C7080002FE2AA /* IoTForgetPassword.h */,
+				EEF45FBD1A2C7080002FE2AA /* IoTForgetPassword.m */,
+				EEF45FBE1A2C7080002FE2AA /* IoTForgetPassword.xib */,
+			);
+			path = UserAccounts;
+			sourceTree = "<group>";
+		};
+		EE16C9CA1A1EF4BE0009FB4E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A97FC1A53C1F10038E4A5 /* XPGWifiSDK */,
+				EE5C0E8F1A4026710019CFDD /* SSPullToRefresh */,
+				EECD150A1A230DC700C650BD /* ZBarSDK */,
+				EEF256461A1F208F00FAA268 /* AFNetworking */,
+				EE16C9E11A1EF4BE0009FB4E /* MBProgressHUD */,
+				EE16CA341A1EF4BE0009FB4E /* Wifi */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EE16C9E11A1EF4BE0009FB4E /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EE16C9E21A1EF4BE0009FB4E /* MBProgressHUD.h */,
+				EE16C9E31A1EF4BE0009FB4E /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		EE16CA341A1EF4BE0009FB4E /* Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				EE16CA351A1EF4BE0009FB4E /* IoTWifiUtil.h */,
+				EE16CA361A1EF4BE0009FB4E /* IoTWifiUtil.m */,
+			);
+			path = Wifi;
+			sourceTree = "<group>";
+		};
+		EE3D0F9F1A2FFCB6004CD54A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691671A43F45500B682DD /* common */,
+				EE7691701A43F45500B682DD /* guide */,
+				EE76917D1A43F45500B682DD /* list */,
+				EE7691851A43F45500B682DD /* Login */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		EE5B91A11A4D078300E9210F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EE5B91A21A4D078300E9210F /* IoTPasswordField.h */,
+				EE5B91A31A4D078300E9210F /* IoTPasswordField.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EE5C0E8F1A4026710019CFDD /* SSPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C0E901A4026710019CFDD /* LICENSE */,
+				EE5C0E921A4026710019CFDD /* SSPullToRefresh */,
+			);
+			path = SSPullToRefresh;
+			sourceTree = "<group>";
+		};
+		EE5C0E921A4026710019CFDD /* SSPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C0E931A4026710019CFDD /* SSPullToRefresh.h */,
+				EE5C0E941A4026710019CFDD /* SSPullToRefreshDefaultContentView.h */,
+				EE5C0E951A4026710019CFDD /* SSPullToRefreshDefaultContentView.m */,
+				EE5C0E961A4026710019CFDD /* SSPullToRefreshSimpleContentView.h */,
+				EE5C0E971A4026710019CFDD /* SSPullToRefreshSimpleContentView.m */,
+				EE5C0E981A4026710019CFDD /* SSPullToRefreshView.h */,
+				EE5C0E991A4026710019CFDD /* SSPullToRefreshView.m */,
+			);
+			path = SSPullToRefresh;
+			sourceTree = "<group>";
+		};
+		EE6A97FC1A53C1F10038E4A5 /* XPGWifiSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */,
+			);
+			name = XPGWifiSDK;
+			path = ../../../../AirCondition/Utils/XPGWifiSDK;
+			sourceTree = "<group>";
+		};
+		EE7691671A43F45500B682DD /* common */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691681A43F45500B682DD /* 2x */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		EE7691681A43F45500B682DD /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691691A43F45500B682DD /* button_1@2x.png */,
+				EE76916A1A43F45500B682DD /* button_2_1@2x.png */,
+				EE76916B1A43F45500B682DD /* button_2_2@2x.png */,
+				EE76916C1A43F45500B682DD /* button_3@2x.png */,
+				EE76916D1A43F45500B682DD /* return_icon@2x.png */,
+				EE76916E1A43F45500B682DD /* switch_off@2x.png */,
+				EE76916F1A43F45500B682DD /* switch_on@2x.png */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		EE7691701A43F45500B682DD /* guide */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691711A43F45500B682DD /* 2x */,
+			);
+			path = guide;
+			sourceTree = "<group>";
+		};
+		EE7691711A43F45500B682DD /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691721A43F45500B682DD /* failure@2x.png */,
+				EE7691731A43F45500B682DD /* guide-36@2x.png */,
+				EE7691741A43F45500B682DD /* guide-38@2x.png */,
+				EE7691751A43F45500B682DD /* guide@2x.png */,
+				EE7691761A43F45500B682DD /* step-08@2x.png */,
+				EE7691771A43F45500B682DD /* step-13@2x.png */,
+				EE7691781A43F45500B682DD /* step-15@2x.png */,
+				EE7691791A43F45500B682DD /* step-17@2x.png */,
+				EE76917A1A43F45500B682DD /* step-18@2x.png */,
+				EE76917B1A43F45500B682DD /* step@2x.png */,
+				EE76917C1A43F45500B682DD /* success@2x.png */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		EE76917D1A43F45500B682DD /* list */ = {
+			isa = PBXGroup;
+			children = (
+				EE76917E1A43F45500B682DD /* 2x */,
+			);
+			path = list;
+			sourceTree = "<group>";
+		};
+		EE76917E1A43F45500B682DD /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				EE76917F1A43F45500B682DD /* device-29@2x.png */,
+				EE7691801A43F45500B682DD /* device-37@2x.png */,
+				EE7691811A43F45500B682DD /* device_list-31@2x.png */,
+				EE7691821A43F45500B682DD /* device_list-34@2x.png */,
+				EE7691831A43F45500B682DD /* device_list_box@2x.png */,
+				EE7691841A43F45500B682DD /* logout_icon@2x.png */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		EE7691851A43F45500B682DD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691861A43F45500B682DD /* 2x */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		EE7691861A43F45500B682DD /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				EE7691891A43F45500B682DD /* login_button@2x.png */,
+				EE76918A1A43F45500B682DD /* login_icon-06@2x.png */,
+				EE76918B1A43F45500B682DD /* login_icon-07@2x.png */,
+				EE76918C1A43F45500B682DD /* login_icon@2x.png */,
+				EE76918D1A43F45500B682DD /* logo@2x.png */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		EECD14C71A23095500C650BD /* Wizard */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD49E51A27198800846720 /* Binding */,
+				EECD14F51A230BB900C650BD /* Soft-AP */,
+				EECD14EA1A230B0A00C650BD /* Air-Link */,
+				EECD14D11A230A0000C650BD /* IoTScanResult.h */,
+				EECD14D21A230A0000C650BD /* IoTScanResult.m */,
+				EECD14D31A230A0000C650BD /* IoTScanResult.xib */,
+				EECD15321A23114F00C650BD /* IoTRegisterByPhone.h */,
+				EECD15331A23114F00C650BD /* IoTRegisterByPhone.m */,
+				EECD15341A23114F00C650BD /* IoTRegisterByPhone.xib */,
+				EECD15371A23116000C650BD /* IoTRegisterByMail.h */,
+				EECD15381A23116000C650BD /* IoTRegisterByMail.m */,
+				EECD15391A23116000C650BD /* IoTRegisterByMail.xib */,
+				EE53F5051A23338E00E8266E /* IoTStepFrame.h */,
+				EE53F5061A23338E00E8266E /* IoTStepFrame.m */,
+				EE53F5071A23338E00E8266E /* IoTStepFrame.xib */,
+				EEE9F6141A4926040042F676 /* IoTDisconnected.h */,
+				EEE9F6151A4926040042F676 /* IoTDisconnected.m */,
+				EEE9F6161A4926040042F676 /* IoTDisconnected.xib */,
+			);
+			path = Wizard;
+			sourceTree = "<group>";
+		};
+		EECD14EA1A230B0A00C650BD /* Air-Link */ = {
+			isa = PBXGroup;
+			children = (
+				EECD14D61A230A5900C650BD /* IoTAddDevice.h */,
+				EECD14D71A230A5900C650BD /* IoTAddDevice.m */,
+				EECD14D81A230A5900C650BD /* IoTAddDevice.xib */,
+				EECD14E01A230A9E00C650BD /* IoTConfigure.h */,
+				EECD14E11A230A9E00C650BD /* IoTConfigure.m */,
+				EECD14E21A230A9E00C650BD /* IoTConfigure.xib */,
+				EEFD49FA1A272BDB00846720 /* IoTWaitForConfigure.h */,
+				EEFD49FB1A272BDB00846720 /* IoTWaitForConfigure.m */,
+				EEFD49FC1A272BDB00846720 /* IoTWaitForConfigure.xib */,
+				EECD14EB1A230B3300C650BD /* IoTConfigureFailed.h */,
+				EECD14EC1A230B3300C650BD /* IoTConfigureFailed.m */,
+				EECD14ED1A230B3300C650BD /* IoTConfigureFailed.xib */,
+			);
+			name = "Air-Link";
+			sourceTree = "<group>";
+		};
+		EECD14F51A230BB900C650BD /* Soft-AP */ = {
+			isa = PBXGroup;
+			children = (
+				EECD14F01A230BB500C650BD /* IoTSetWifi.h */,
+				EECD14F11A230BB500C650BD /* IoTSetWifi.m */,
+				EECD14F21A230BB500C650BD /* IoTSetWifi.xib */,
+				EECD14F61A230BF600C650BD /* IoTSoftAPConfigure.h */,
+				EECD14F71A230BF600C650BD /* IoTSoftAPConfigure.m */,
+				EECD14F81A230BF600C650BD /* IoTSoftAPConfigure.xib */,
+				EECD15001A230C8000C650BD /* IoTConfigureResult.h */,
+				EECD15011A230C8000C650BD /* IoTConfigureResult.m */,
+				EECD15021A230C8000C650BD /* IoTConfigureResult.xib */,
+			);
+			name = "Soft-AP";
+			sourceTree = "<group>";
+		};
+		EECD150A1A230DC700C650BD /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EECD150B1A230DC700C650BD /* Headers */,
+				EECD15221A230DC700C650BD /* libzbar.a */,
+				EECD15231A230DC700C650BD /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		EECD150B1A230DC700C650BD /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				EECD150C1A230DC700C650BD /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		EECD150C1A230DC700C650BD /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				EECD150D1A230DC700C650BD /* zbar */,
+				EECD15171A230DC700C650BD /* zbar.h */,
+				EECD15181A230DC700C650BD /* ZBarCameraSimulator.h */,
+				EECD15191A230DC700C650BD /* ZBarCaptureReader.h */,
+				EECD151A1A230DC700C650BD /* ZBarHelpController.h */,
+				EECD151B1A230DC700C650BD /* ZBarImage.h */,
+				EECD151C1A230DC700C650BD /* ZBarImageScanner.h */,
+				EECD151D1A230DC700C650BD /* ZBarReaderController.h */,
+				EECD151E1A230DC700C650BD /* ZBarReaderView.h */,
+				EECD151F1A230DC700C650BD /* ZBarReaderViewController.h */,
+				EECD15201A230DC700C650BD /* ZBarSDK.h */,
+				EECD15211A230DC700C650BD /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		EECD150D1A230DC700C650BD /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				EECD150E1A230DC700C650BD /* Decoder.h */,
+				EECD150F1A230DC700C650BD /* Exception.h */,
+				EECD15101A230DC700C650BD /* Image.h */,
+				EECD15111A230DC700C650BD /* ImageScanner.h */,
+				EECD15121A230DC700C650BD /* Processor.h */,
+				EECD15131A230DC700C650BD /* Scanner.h */,
+				EECD15141A230DC700C650BD /* Symbol.h */,
+				EECD15151A230DC700C650BD /* Video.h */,
+				EECD15161A230DC700C650BD /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		EECD15231A230DC700C650BD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EECD15241A230DC700C650BD /* zbar-back.png */,
+				EECD15251A230DC700C650BD /* zbar-help.html */,
+				EECD15261A230DC700C650BD /* zbar-helpicons.png */,
+				EECD15271A230DC700C650BD /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		EEF256361A1F1FBB00FAA268 /* IoTProcessModule */ = {
+			isa = PBXGroup;
+			children = (
+				EEF256371A1F1FBB00FAA268 /* Supporting Files */,
+			);
+			path = IoTProcessModule;
+			sourceTree = "<group>";
+		};
+		EEF256371A1F1FBB00FAA268 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE16CA4E1A1EF4C50009FB4E /* IoTDefinitions.pch */,
+				EEF256381A1F1FBB00FAA268 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEF256461A1F208F00FAA268 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EEF256471A1F208F00FAA268 /* AFHTTPRequestOperation.h */,
+				EEF256481A1F208F00FAA268 /* AFHTTPRequestOperation.m */,
+				EEF256491A1F208F00FAA268 /* AFHTTPRequestOperationManager.h */,
+				EEF2564A1A1F208F00FAA268 /* AFHTTPRequestOperationManager.m */,
+				EEF2564B1A1F208F00FAA268 /* AFHTTPSessionManager.h */,
+				EEF2564C1A1F208F00FAA268 /* AFHTTPSessionManager.m */,
+				EEF2564D1A1F208F00FAA268 /* AFNetworking.h */,
+				EEF2564E1A1F208F00FAA268 /* AFNetworkReachabilityManager.h */,
+				EEF2564F1A1F208F00FAA268 /* AFNetworkReachabilityManager.m */,
+				EEF256501A1F208F00FAA268 /* AFSecurityPolicy.h */,
+				EEF256511A1F208F00FAA268 /* AFSecurityPolicy.m */,
+				EEF256521A1F208F00FAA268 /* AFURLConnectionOperation.h */,
+				EEF256531A1F208F00FAA268 /* AFURLConnectionOperation.m */,
+				EEF256541A1F208F00FAA268 /* AFURLRequestSerialization.h */,
+				EEF256551A1F208F00FAA268 /* AFURLRequestSerialization.m */,
+				EEF256561A1F208F00FAA268 /* AFURLResponseSerialization.h */,
+				EEF256571A1F208F00FAA268 /* AFURLResponseSerialization.m */,
+				EEF256581A1F208F00FAA268 /* AFURLSessionManager.h */,
+				EEF256591A1F208F00FAA268 /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		EEFD49E51A27198800846720 /* Binding */ = {
+			isa = PBXGroup;
+			children = (
+				EEFD49FF1A272D1F00846720 /* IoTBindFailed.h */,
+				EEFD4A001A272D1F00846720 /* IoTBindFailed.m */,
+				EEFD4A011A272D1F00846720 /* IoTBindFailed.xib */,
+			);
+			name = Binding;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE16C9A11A1EF4850009FB4E /* IoTProcessModel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE16C9B61A1EF4850009FB4E /* Build configuration list for PBXNativeTarget "IoTProcessModel" */;
+			buildPhases = (
+				EE16C99E1A1EF4850009FB4E /* Sources */,
+				EE16C99F1A1EF4850009FB4E /* Frameworks */,
+				EE16C9A01A1EF4850009FB4E /* Copy Files */,
+				EE4D8EC01A1F36A4004863A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE5D35411A305368001C1E09 /* PBXTargetDependency */,
+			);
+			name = IoTProcessModel;
+			productName = IoTProcessModel;
+			productReference = EE16C9A21A1EF4850009FB4E /* libIoTProcessModel.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EEF256341A1F1FBB00FAA268 /* IoTProcessModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEF256391A1F1FBB00FAA268 /* Build configuration list for PBXNativeTarget "IoTProcessModule" */;
+			buildPhases = (
+				EEF256311A1F1FBB00FAA268 /* Sources */,
+				EEF256321A1F1FBB00FAA268 /* Frameworks */,
+				EEF256331A1F1FBB00FAA268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IoTProcessModule;
+			productName = IoTProcessModule;
+			productReference = EEF256351A1F1FBB00FAA268 /* IoTProcessModule.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE16C99A1A1EF4850009FB4E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = xpg;
+				TargetAttributes = {
+					EE16C9A11A1EF4850009FB4E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					EEE9F61B1A494D080042F676 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					EEF256341A1F1FBB00FAA268 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+				};
+			};
+			buildConfigurationList = EE16C99D1A1EF4850009FB4E /* Build configuration list for PBXProject "IoTProcessModel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = EE16C9991A1EF4850009FB4E;
+			productRefGroup = EE16C9A31A1EF4850009FB4E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE16C9A11A1EF4850009FB4E /* IoTProcessModel */,
+				EEF256341A1F1FBB00FAA268 /* IoTProcessModule */,
+				EEE9F61B1A494D080042F676 /* IoTProcessModel-library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE4D8EC01A1F36A4004863A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEF256331A1F1FBB00FAA268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE7691AD1A43F48A00B682DD /* button_1@2x.png in Resources */,
+				EE7691AE1A43F48A00B682DD /* button_2_1@2x.png in Resources */,
+				EE7691AF1A43F48A00B682DD /* button_2_2@2x.png in Resources */,
+				EE7691B01A43F48A00B682DD /* button_3@2x.png in Resources */,
+				EE7691B11A43F48A00B682DD /* return_icon@2x.png in Resources */,
+				EE7691B21A43F48A00B682DD /* switch_off@2x.png in Resources */,
+				EE7691B31A43F48A00B682DD /* switch_on@2x.png in Resources */,
+				EE7691B41A43F48A00B682DD /* failure@2x.png in Resources */,
+				EE7691B51A43F48A00B682DD /* guide-36@2x.png in Resources */,
+				EE7691B61A43F48A00B682DD /* guide-38@2x.png in Resources */,
+				EE7691B71A43F48A00B682DD /* guide@2x.png in Resources */,
+				EE7691B81A43F48A00B682DD /* step-08@2x.png in Resources */,
+				EE7691B91A43F48A00B682DD /* step-13@2x.png in Resources */,
+				EE7691BA1A43F48A00B682DD /* step-15@2x.png in Resources */,
+				EE7691BB1A43F48A00B682DD /* step-17@2x.png in Resources */,
+				EE7691BC1A43F48A00B682DD /* step-18@2x.png in Resources */,
+				EE7691BD1A43F48A00B682DD /* step@2x.png in Resources */,
+				EE7691BE1A43F48A00B682DD /* success@2x.png in Resources */,
+				EE7691BF1A43F48A00B682DD /* device-29@2x.png in Resources */,
+				EE7691C01A43F48A00B682DD /* device-37@2x.png in Resources */,
+				EE7691C11A43F48A00B682DD /* device_list-31@2x.png in Resources */,
+				EE7691C21A43F48A00B682DD /* device_list-34@2x.png in Resources */,
+				EE7691C31A43F48A00B682DD /* device_list_box@2x.png in Resources */,
+				EE7691C41A43F48A00B682DD /* logout_icon@2x.png in Resources */,
+				EE7691C71A43F48A00B682DD /* login_button@2x.png in Resources */,
+				EE7691C81A43F48A00B682DD /* login_icon-06@2x.png in Resources */,
+				EE7691C91A43F48A00B682DD /* login_icon-07@2x.png in Resources */,
+				EE7691CA1A43F48A00B682DD /* login_icon@2x.png in Resources */,
+				EE7691CB1A43F48A00B682DD /* logo@2x.png in Resources */,
+				EEE9F6191A493E920042F676 /* IoTDisconnected.xib in Resources */,
+				EEF45FC11A2C70D8002FE2AA /* IoTForgetPassword.xib in Resources */,
+				EE65FDD51A2C164100F3A549 /* IoTBindFailed.xib in Resources */,
+				EE65FDD61A2C164100F3A549 /* IoTWaitForConfigure.xib in Resources */,
+				EE53F5151A245E7D00E8266E /* IoTDeviceList.xib in Resources */,
+				EE53F50A1A23343500E8266E /* IoTStepFrame.xib in Resources */,
+				EE53F4DE1A2315F800E8266E /* IoTSetWifi.xib in Resources */,
+				EE53F4DF1A2315F800E8266E /* IoTSoftAPConfigure.xib in Resources */,
+				EE53F4E11A2315F800E8266E /* IoTConfigureResult.xib in Resources */,
+				EE53F4E21A2315F800E8266E /* IoTAddDevice.xib in Resources */,
+				EE53F4E31A2315F800E8266E /* IoTConfigure.xib in Resources */,
+				EE53F4E41A2315F800E8266E /* IoTConfigureFailed.xib in Resources */,
+				EE53F4E61A2315F800E8266E /* IoTScanResult.xib in Resources */,
+				EE53F4E71A2315F800E8266E /* IoTRegisterByPhone.xib in Resources */,
+				EE53F4E81A2315F800E8266E /* IoTRegisterByMail.xib in Resources */,
+				EE53F4E91A2315F800E8266E /* IoTLogin.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EEE9F61F1A494D120042F676 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=${PROJECT_NAME}\nSF_EXECUTABLE_PATH=\"lib${SF_TARGET_NAME}.a\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${SF_TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nxcrun lipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/../${SF_EXECUTABLE_PATH}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncd \"../..\"\nrm \"AirCondition/utils/IoTProcessModel/${SF_EXECUTABLE_PATH}\"\ncp -a \"${BUILT_PRODUCTS_DIR}/../${SF_EXECUTABLE_PATH}\" \"AirCondition/utils/IoTProcessModel/${SF_EXECUTABLE_PATH}\"\n\nrm -rf \"AirCondition/utils/IoTProcessModel/IoTProcessModule.bundle\"\nmkdir \"AirCondition/utils/IoTProcessModel/IoTProcessModule.bundle\"\ncp -a \"${BUILT_PRODUCTS_DIR}/IoTProcessModule.bundle\" \"AirCondition/utils/IoTProcessModel/\"\n\nrm -rf \"AirCondition/utils/IoTProcessModel/include\"\nmkdir \"AirCondition/utils/IoTProcessModel/include\"\ncp -a \"${BUILT_PRODUCTS_DIR}/include\" \"AirCondition/utils/IoTProcessModel/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE16C99E1A1EF4850009FB4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE5B91A41A4D078300E9210F /* IoTPasswordField.m in Sources */,
+				EE5C0E9C1A4026710019CFDD /* SSPullToRefreshDefaultContentView.m in Sources */,
+				EECD14D91A230A5900C650BD /* IoTAddDevice.m in Sources */,
+				EEF256631A1F20C100FAA268 /* AFHTTPRequestOperation.m in Sources */,
+				EEF256641A1F20C100FAA268 /* AFHTTPRequestOperationManager.m in Sources */,
+				EECD15351A23114F00C650BD /* IoTRegisterByPhone.m in Sources */,
+				EECD15031A230C8000C650BD /* IoTConfigureResult.m in Sources */,
+				EEF256651A1F20C100FAA268 /* AFHTTPSessionManager.m in Sources */,
+				EECD14F91A230BF600C650BD /* IoTSoftAPConfigure.m in Sources */,
+				EEF256661A1F20C100FAA268 /* AFNetworkReachabilityManager.m in Sources */,
+				EEF256671A1F20C100FAA268 /* AFSecurityPolicy.m in Sources */,
+				EEF256681A1F20C100FAA268 /* AFURLConnectionOperation.m in Sources */,
+				EEF256691A1F20C100FAA268 /* AFURLRequestSerialization.m in Sources */,
+				EECD14D41A230A0000C650BD /* IoTScanResult.m in Sources */,
+				EEF2566A1A1F20C100FAA268 /* AFURLResponseSerialization.m in Sources */,
+				EEF2566B1A1F20C100FAA268 /* AFURLSessionManager.m in Sources */,
+				EEF256451A1F202F00FAA268 /* IoTDeviceList.m in Sources */,
+				EECD14F31A230BB500C650BD /* IoTSetWifi.m in Sources */,
+				EEE9F6171A4926040042F676 /* IoTDisconnected.m in Sources */,
+				EE16CA661A1F0E500009FB4E /* IoTWifiUtil.m in Sources */,
+				EE5C0E9D1A4026710019CFDD /* SSPullToRefreshSimpleContentView.m in Sources */,
+				EEF45FBF1A2C7080002FE2AA /* IoTForgetPassword.m in Sources */,
+				EE5C0E9E1A4026710019CFDD /* SSPullToRefreshView.m in Sources */,
+				EE53F5081A23338E00E8266E /* IoTStepFrame.m in Sources */,
+				EECD14E31A230A9E00C650BD /* IoTConfigure.m in Sources */,
+				EECD14EE1A230B3300C650BD /* IoTConfigureFailed.m in Sources */,
+				EEFD49FD1A272BDB00846720 /* IoTWaitForConfigure.m in Sources */,
+				EE16CA651A1F0E3D0009FB4E /* MBProgressHUD.m in Sources */,
+				EECD153A1A23116000C650BD /* IoTRegisterByMail.m in Sources */,
+				EECD15301A230FB300C650BD /* IoTLogin.m in Sources */,
+				EEFD4A021A272D1F00846720 /* IoTBindFailed.m in Sources */,
+				EE16C9A81A1EF4850009FB4E /* IoTProcessModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EEF256311A1F1FBB00FAA268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE5D35411A305368001C1E09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EEF256341A1F1FBB00FAA268 /* IoTProcessModule */;
+			targetProxy = EE5D35401A305368001C1E09 /* PBXContainerItemProxy */;
+		};
+		EEE9F6271A4958820042F676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE16C9A11A1EF4850009FB4E /* IoTProcessModel */;
+			targetProxy = EEE9F6261A4958820042F676 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EE16C9B41A1EF4850009FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/IoTProcessModel/Utils\"",
+					"\"$(SRCROOT)/IoTProcessModel/Utils/AFNetworking\"",
+					"\"$(SRCROOT)/IoTProcessModel/Utils/iToast\"",
+					"\"$(SRCROOT)/../../AirCondition/Utils\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EE16C9B51A1EF4850009FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/IoTProcessModel/Utils\"",
+					"\"$(SRCROOT)/IoTProcessModel/Utils/AFNetworking\"",
+					"\"$(SRCROOT)/IoTProcessModel/Utils/iToast\"",
+					"\"$(SRCROOT)/../../AirCondition/Utils\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE16C9B71A1EF4850009FB4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/MacData/Projects/OpenSource/gizwits2/gizwits2_opensource/AirCondition/Utils/XPGWifiSDK,
+				);
+				GCC_PREFIX_HEADER = IotProcessModel/IotDefinitions.pch;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/ZBarSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EE16C9B81A1EF4850009FB4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Volumes/MacData/Projects/OpenSource/gizwits2/gizwits2_opensource/AirCondition/Utils/XPGWifiSDK,
+				);
+				GCC_PREFIX_HEADER = IotProcessModel/IotDefinitions.pch;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/ZBarSDK",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EEE9F61C1A494D080042F676 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EEE9F61D1A494D080042F676 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EEF2563A1A1F1FBB00FAA268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IoTProcessModule/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-force_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EEF2563B1A1F1FBB00FAA268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = IoTProcessModule/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-force_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE16C99D1A1EF4850009FB4E /* Build configuration list for PBXProject "IoTProcessModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE16C9B41A1EF4850009FB4E /* Debug */,
+				EE16C9B51A1EF4850009FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE16C9B61A1EF4850009FB4E /* Build configuration list for PBXNativeTarget "IoTProcessModel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE16C9B71A1EF4850009FB4E /* Debug */,
+				EE16C9B81A1EF4850009FB4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE9F61E1A494D080042F676 /* Build configuration list for PBXAggregateTarget "IoTProcessModel-library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE9F61C1A494D080042F676 /* Debug */,
+				EEE9F61D1A494D080042F676 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEF256391A1F1FBB00FAA268 /* Build configuration list for PBXNativeTarget "IoTProcessModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEF2563A1A1F1FBB00FAA268 /* Debug */,
+				EEF2563B1A1F1FBB00FAA268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE16C99A1A1EF4850009FB4E /* Project object */;
+}

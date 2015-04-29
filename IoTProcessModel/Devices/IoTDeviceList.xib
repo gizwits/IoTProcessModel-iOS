@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTDeviceList">
+            <connections>
+                <outlet property="tableView" destination="kSq-SB-sOx" id="p6q-wo-PHJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="p1q-36-AWf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kSq-SB-sOx">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dcG-OH-eJg"/>
+                        <outlet property="delegate" destination="-1" id="nzg-39-3jM"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="kSq-SB-sOx" secondAttribute="trailing" id="5oz-PP-FNp"/>
+                <constraint firstItem="kSq-SB-sOx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Iv2-m5-qPO"/>
+                <constraint firstItem="kSq-SB-sOx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Uns-LS-nNV"/>
+                <constraint firstAttribute="bottom" secondItem="kSq-SB-sOx" secondAttribute="bottom" id="uf5-W3-vG4"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
