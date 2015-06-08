@@ -38,7 +38,7 @@ static IoTProcessModel *sharedModel = nil;
 
 + (BOOL)copyDataToDocument:(NSString *)product data:(NSData *)data
 {
-    // 拷贝配置内容到 /Documents/Devices 目录
+    // 拷贝配置内容到 /Documents/XPGWifiSDK/Devices 目录
     NSString *destPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     destPath = [destPath stringByAppendingPathComponent:@"XPGWifiSDK/Devices"];
     
