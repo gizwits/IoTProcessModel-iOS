@@ -148,7 +148,6 @@
 		EE16CA351A1EF4BE0009FB4E /* IoTWifiUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTWifiUtil.h; sourceTree = "<group>"; };
 		EE16CA361A1EF4BE0009FB4E /* IoTWifiUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTWifiUtil.m; sourceTree = "<group>"; };
 		EE16CA4E1A1EF4C50009FB4E /* IoTDefinitions.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IoTDefinitions.pch; path = ../IoTProcessModel/IoTDefinitions.pch; sourceTree = "<group>"; };
-		EE53F4EA1A23171200E8266E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = SOURCE_ROOT; };
 		EE53F5051A23338E00E8266E /* IoTStepFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IoTStepFrame.h; sourceTree = "<group>"; };
 		EE53F5061A23338E00E8266E /* IoTStepFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IoTStepFrame.m; sourceTree = "<group>"; };
 		EE53F5071A23338E00E8266E /* IoTStepFrame.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IoTStepFrame.xib; sourceTree = "<group>"; };
@@ -327,7 +326,6 @@
 		EE16C9A41A1EF4850009FB4E /* IoTProcessModel */ = {
 			isa = PBXGroup;
 			children = (
-				EE53F4EA1A23171200E8266E /* README */,
 				EE5B91A11A4D078300E9210F /* Common */,
 				EE3D0F9F1A2FFCB6004CD54A /* Images */,
 				EECD14C71A23095500C650BD /* Wizard */,
