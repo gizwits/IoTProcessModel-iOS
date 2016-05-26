@@ -223,6 +223,16 @@
         [ProcessModel.hud hide:YES];
         
         NSString *message = [NSString stringWithFormat:@"登录失败：%@", errorMessage];
+        switch ([error integerValue]) {
+            case 9020:
+                message = @"用户名或密码错误";
+                break;
+            case -27:
+                message = @"请检查网络";
+                break;
+            default:
+                break;
+        }
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alertView show];
     }

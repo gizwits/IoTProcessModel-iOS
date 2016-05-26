@@ -466,6 +466,10 @@
 #pragma mark - 列表回调
 - (void)XPGWifiSDK:(XPGWifiSDK *)wifiSDK didDiscovered:(NSArray *)deviceList result:(int)result
 {
+    if (result == -27) {
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"网络异常，获取设备列表失败。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+    }
+    
     if(isDiscoverLock)
         return;
     

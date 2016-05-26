@@ -60,6 +60,8 @@ typedef enum
 
 @property (nonatomic, assign) BOOL isRegisteredUser;
 
+@property (nonatomic, strong) NSString *appSecret;
+
 /**
  * @brief 公共方法
  */

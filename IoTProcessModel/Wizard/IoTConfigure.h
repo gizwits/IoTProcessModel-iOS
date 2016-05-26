@@ -39,6 +39,6 @@
  * @param ssid 可上网的SSID名
  * @param password 可上网的SSID对应的密码
  */
-- (id)initWithAirLink:(NSString *)ssid password:(NSString *)password;
+- (id)initWithAirLink:(NSString *)ssid password:(NSString *)password wifiType:(NSInteger)wifiType;
 
 @end

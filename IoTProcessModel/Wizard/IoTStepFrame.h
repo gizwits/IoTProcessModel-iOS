@@ -38,6 +38,8 @@
 
 @property (readonly, nonatomic, strong) UINavigationController *navCtrl;
 
+@property (nonatomic, weak) IBOutlet UIButton *backBtn;
+
 /**
  * @brief 设置步骤
  * @note 格式：@[
