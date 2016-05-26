@@ -22,6 +22,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1A94AC1F1C3A841000AA81D0 /* libEasyLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94AC1B1C3A841000AA81D0 /* libEasyLink.a */; };
+		1A94AC201C3A841000AA81D0 /* libEsptouch_v0.3.3.4_4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94AC1C1C3A841000AA81D0 /* libEsptouch_v0.3.3.4_4.a */; };
+		1A94AC211C3A841000AA81D0 /* libLibSimpleConfig.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94AC1D1C3A841000AA81D0 /* libLibSimpleConfig.a */; };
+		1A94AC221C3A841000AA81D0 /* XPGWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A94AC1E1C3A841000AA81D0 /* XPGWifiSDK.framework */; };
 		EE16C9A61A1EF4850009FB4E /* IoTProcessModel.h in Copy Files */ = {isa = PBXBuildFile; fileRef = EE16C9A51A1EF4850009FB4E /* IoTProcessModel.h */; };
 		EE16C9A81A1EF4850009FB4E /* IoTProcessModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16C9A71A1EF4850009FB4E /* IoTProcessModel.m */; };
 		EE16CA651A1F0E3D0009FB4E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EE16C9E31A1EF4BE0009FB4E /* MBProgressHUD.m */; };
@@ -46,7 +50,6 @@
 		EE5C0E9E1A4026710019CFDD /* SSPullToRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5C0E991A4026710019CFDD /* SSPullToRefreshView.m */; };
 		EE65FDD51A2C164100F3A549 /* IoTBindFailed.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD4A011A272D1F00846720 /* IoTBindFailed.xib */; };
 		EE65FDD61A2C164100F3A549 /* IoTWaitForConfigure.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFD49FC1A272BDB00846720 /* IoTWaitForConfigure.xib */; };
-		EE6A97FE1A53C1F10038E4A5 /* XPGWifiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */; };
 		EE7691AD1A43F48A00B682DD /* button_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE7691691A43F45500B682DD /* button_1@2x.png */; };
 		EE7691AE1A43F48A00B682DD /* button_2_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916A1A43F45500B682DD /* button_2_1@2x.png */; };
 		EE7691AF1A43F48A00B682DD /* button_2_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE76916B1A43F45500B682DD /* button_2_2@2x.png */; };
@@ -140,6 +143,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A94AC1B1C3A841000AA81D0 /* libEasyLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEasyLink.a; path = IoTProcessModel/Utils/XPGWifiSDK/libEasyLink.a; sourceTree = SOURCE_ROOT; };
+		1A94AC1C1C3A841000AA81D0 /* libEsptouch_v0.3.3.4_4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libEsptouch_v0.3.3.4_4.a; path = IoTProcessModel/Utils/XPGWifiSDK/libEsptouch_v0.3.3.4_4.a; sourceTree = SOURCE_ROOT; };
+		1A94AC1D1C3A841000AA81D0 /* libLibSimpleConfig.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libLibSimpleConfig.a; path = IoTProcessModel/Utils/XPGWifiSDK/libLibSimpleConfig.a; sourceTree = SOURCE_ROOT; };
+		1A94AC1E1C3A841000AA81D0 /* XPGWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XPGWifiSDK.framework; path = IoTProcessModel/Utils/XPGWifiSDK/XPGWifiSDK.framework; sourceTree = SOURCE_ROOT; };
 		EE16C9A21A1EF4850009FB4E /* libIoTProcessModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIoTProcessModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE16C9A51A1EF4850009FB4E /* IoTProcessModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IoTProcessModel.h; sourceTree = "<group>"; };
 		EE16C9A71A1EF4850009FB4E /* IoTProcessModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IoTProcessModel.m; sourceTree = "<group>"; };
@@ -162,7 +169,6 @@
 		EE5C0E971A4026710019CFDD /* SSPullToRefreshSimpleContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshSimpleContentView.m; sourceTree = "<group>"; };
 		EE5C0E981A4026710019CFDD /* SSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPullToRefreshView.h; sourceTree = "<group>"; };
 		EE5C0E991A4026710019CFDD /* SSPullToRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPullToRefreshView.m; sourceTree = "<group>"; };
-		EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = XPGWifiSDK.framework; sourceTree = "<group>"; };
 		EE7691691A43F45500B682DD /* button_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_1@2x.png"; sourceTree = "<group>"; };
 		EE76916A1A43F45500B682DD /* button_2_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_2_1@2x.png"; sourceTree = "<group>"; };
 		EE76916B1A43F45500B682DD /* button_2_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_2_2@2x.png"; sourceTree = "<group>"; };
@@ -290,8 +296,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE6A97FE1A53C1F10038E4A5 /* XPGWifiSDK.framework in Frameworks */,
+				1A94AC211C3A841000AA81D0 /* libLibSimpleConfig.a in Frameworks */,
+				1A94AC221C3A841000AA81D0 /* XPGWifiSDK.framework in Frameworks */,
+				1A94AC201C3A841000AA81D0 /* libEsptouch_v0.3.3.4_4.a in Frameworks */,
 				EECD15281A230DC700C650BD /* libzbar.a in Frameworks */,
+				1A94AC1F1C3A841000AA81D0 /* libEasyLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,7 +448,10 @@
 		EE6A97FC1A53C1F10038E4A5 /* XPGWifiSDK */ = {
 			isa = PBXGroup;
 			children = (
-				EE6A97FD1A53C1F10038E4A5 /* XPGWifiSDK.framework */,
+				1A94AC1B1C3A841000AA81D0 /* libEasyLink.a */,
+				1A94AC1C1C3A841000AA81D0 /* libEsptouch_v0.3.3.4_4.a */,
+				1A94AC1D1C3A841000AA81D0 /* libLibSimpleConfig.a */,
+				1A94AC1E1C3A841000AA81D0 /* XPGWifiSDK.framework */,
 			);
 			name = XPGWifiSDK;
 			path = ../../../../AirCondition/Utils/XPGWifiSDK;
@@ -1030,11 +1042,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/MacData/Projects/OpenSource/gizwits2/gizwits2_opensource/AirCondition/Utils/XPGWifiSDK,
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK",
 				);
 				GCC_PREFIX_HEADER = IotProcessModel/IotDefinitions.pch;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IoTProcessModel/Utils/ZBarSDK",
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
@@ -1049,11 +1063,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Volumes/MacData/Projects/OpenSource/gizwits2/gizwits2_opensource/AirCondition/Utils/XPGWifiSDK,
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK",
 				);
 				GCC_PREFIX_HEADER = IotProcessModel/IotDefinitions.pch;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IoTProcessModel/Utils/ZBarSDK",
+					"$(PROJECT_DIR)/IoTProcessModel/Utils/XPGWifiSDK",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";

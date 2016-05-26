@@ -52,6 +52,7 @@ typedef enum
  */
 @property (strong, nonatomic) NSString *ssid;
 @property (strong, nonatomic) NSString *password;
+@property (assign, nonatomic) NSInteger wifiType;
 
 @end
 
@@ -68,7 +69,7 @@ typedef enum
     return self;
 }
 
-- (id)initWithAirLink:(NSString *)ssid password:(NSString *)password
+- (id)initWithAirLink:(NSString *)ssid password:(NSString *)password wifiType:(NSInteger)wifiType
 {
     self = [super initWithNibName:nil bundle:[IoTProcessModel resourceBundle]];
     if(self)
@@ -76,6 +77,7 @@ typedef enum
         self.type = IoTConfigureTypeAirLink;
         self.ssid = ssid;
         self.password = password;
+        self.wifiType = wifiType;
     }
     return self;
 }
@@ -122,6 +124,21 @@ typedef enum
         {
             //执行获取 PASSCODE 并绑定操作
             [[XPGWifiSDK sharedInstance] bindDeviceWithUid:ProcessModel.uid token:ProcessModel.token did:self.device.did passCode:nil remark:nil];
+            
+            NSLog(@"");
+            NSLog(@"");
+            NSLog(@"");
+            NSLog(@"");
+            NSLog(@"**********************************");
+            NSLog(@"**********************************");
+            NSLog(@"**************** bindDeviceWithUid ******************");
+            NSLog(@"**********************************");
+            NSLog(@"**********************************");
+            NSLog(@"");
+            NSLog(@"");
+            NSLog(@"");
+            NSLog(@"");
+            
             break;
         }
         case IoTConfigureTypeAirLink:
@@ -164,7 +181,7 @@ typedef enum
             break;
         case IoTConfigureTypeAirLink:
             //执行配置操作
-            [[XPGWifiSDK sharedInstance] setDeviceWifi:self.ssid key:self.password mode:XPGWifiSDKAirLinkMode timeout:timeout];
+            [[XPGWifiSDK sharedInstance] setDeviceWifi:self.ssid key:self.password mode:XPGWifiSDKAirLinkMode softAPSSIDPrefix:nil timeout:timeout wifiGAgentType:@[@(self.wifiType)]];
             break;
         default:
             break;
@@ -178,6 +195,20 @@ typedef enum
 
 - (void)XPGWifiSDK:(XPGWifiSDK *)wifiSDK didBindDevice:(NSString *)did error:(NSNumber *)error errorMessage:(NSString *)errorMessage
 {
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"**********************************");
+    NSLog(@"**********************************");
+    NSLog(@"**************** 一个按钮界面 ******************");
+    NSLog(@"**********************************");
+    NSLog(@"**********************************");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    
     if (![error intValue]) {
         //绑定成功
         UIViewController *deviceListCtrl = nil;

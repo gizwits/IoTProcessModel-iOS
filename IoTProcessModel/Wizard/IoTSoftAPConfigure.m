@@ -79,8 +79,10 @@
     int timeout = XPG_SOFTAP_TIMEOUT;
     IoTWaitForConfigure *waitForConfigure = [[IoTWaitForConfigure alloc] initWithTimeout:timeout andType:IoTWaitForConfigureTypeSoftAP];
     [self.navigationController pushViewController:waitForConfigure animated:YES];
-    
-//    [[XPGWifiSDK sharedInstance] setDeviceWifi:self.ssid key:self.textPass.text mode:XPGWifiSDKSoftAPMode timeout:timeout];
+    NSString *softApSSID = [[IoTWifiUtil SSIDInfo] valueForKey:@"SSID"];
+    if (softApSSID) {
+        [[XPGWifiSDK sharedInstance] setDeviceWifi:self.ssid key:self.textPass.text mode:XPGWifiSDKSoftAPMode softAPSSIDPrefix:softApSSID timeout:timeout wifiGAgentType:nil];
+    }
 }
 
 - (IBAction)onTap:(id)sender {

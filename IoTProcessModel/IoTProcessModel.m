@@ -84,7 +84,7 @@ static IoTProcessModel *sharedModel = nil;
     }
 }
 
-+ (IoTProcessModel *)startWithAppID:(NSString *)appid product:(NSString *)product productJson:(NSData *)data
++ (IoTProcessModel *)startWithAppID:(NSString *)appid appSecret:(NSString*)appSecret product:(NSString *)product productJson:(NSData *)data
 {
     if(appid.length == 0 || product.length == 0 || data.length == 0)
     {
@@ -106,6 +106,8 @@ static IoTProcessModel *sharedModel = nil;
         
         // 初始化 Wifi SDK
         [ProcessModel initWifiSDK:appid];
+        
+        [IoTProcessModel sharedModel].appSecret = appSecret;
     }
     return result;
 }

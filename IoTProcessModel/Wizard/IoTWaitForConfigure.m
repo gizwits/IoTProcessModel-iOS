@@ -66,6 +66,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    [self.stepFrame.backBtn setHidden:YES];
+    
     [XPGWifiSDK sharedInstance].delegate = self;
     
     self.timeout = resetTimeout;
@@ -76,6 +79,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
+    
+    [self.stepFrame.backBtn setHidden:NO];
     
     [XPGWifiSDK sharedInstance].delegate = nil;
     [waitTimer invalidate];

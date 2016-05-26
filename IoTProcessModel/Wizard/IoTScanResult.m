@@ -235,13 +235,33 @@
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     XPGWifiDevice *device = self.devices[indexPath.row];
-    IoTConfigure *configure = [[IoTConfigure alloc] initWithQueryPasscode:device];
-    [self.navigationController pushViewController:configure animated:YES];
+//    IoTConfigure *configure = [[IoTConfigure alloc] initWithQueryPasscode:device];
+//    [self.navigationController pushViewController:configure animated:YES];
+    
+    ProcessModel.hud.labelText = [NSString stringWithFormat:@"正在绑定%@...", device.macAddress];
+    [ProcessModel.hud show:YES];
+    [[XPGWifiSDK sharedInstance] bindDeviceWithUid:ProcessModel.uid token:ProcessModel.token did:device.did passCode:nil remark:nil];
+    
 }
 
 #pragma mark - XPGWifiSDK delegate
 - (void)XPGWifiSDK:(XPGWifiSDK *)wifiSDK didBindDevice:(NSString *)did error:(NSNumber *)error errorMessage:(NSString *)errorMessage
 {
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"**********************************");
+    NSLog(@"**********************************");
+    NSLog(@"*************** iOTScanResult 列表界面 *******************");
+    NSLog(@"**********************************");
+    NSLog(@"**********************************");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"");
+    
+    
     //退出界面并回调
     [ProcessModel.hud hide:YES];
     

@@ -26,12 +26,20 @@
 #import "IoTWifiUtil.h"
 #import "IoTConfigure.h"
 
-@interface IoTAddDevice () <UITextFieldDelegate>
+@interface IoTAddDevice () <UITextFieldDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *textWifiName;
 
 @property (strong, nonatomic) NSString *ssid;
 @property (weak, nonatomic) IBOutlet IoTPasswordField *textPass;
+
+@property (assign, nonatomic) NSInteger wifiType;
+@property (weak, nonatomic) IBOutlet UIButton *wifiSelectBtn;
+@property (strong, nonatomic) NSArray *wifiTypeArray;
+@property (strong, nonatomic) UIActionSheet *actionSheet;
+
+
+//@property (weak, nonatomic) IBOutlet UITableViewCell *wifiType;
 
 @end
 
@@ -41,7 +49,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+//    self.wifiType.textLabel.text = @"请选择Wifi类型";
+//    self.wifiType.detailTextLabel.text = @"庆科";
+    
     [self didBecomeActive];
+    self.wifiTypeArray = [NSArray arrayWithObjects:@"庆科",@"汉枫",@"RealTek",@"联盛德",@"乐鑫",@"高通",@"TI", nil];
+    self.wifiType = 0;
+    [self.wifiSelectBtn setTitle:[self.wifiTypeArray objectAtIndex:self.wifiType] forState:UIControlStateNormal];
+    self.actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"庆科",@"汉枫",@"RealTek",@"联盛德",@"乐鑫",@"高通",@"TI",nil];
     [self.textPass becomeFirstResponder];
 }
 
@@ -88,7 +103,7 @@
 - (IBAction)onNext:(id)sender {
     if(self.ssid.length > 0)
     {
-        IoTConfigure *configure = [[IoTConfigure alloc] initWithAirLink:self.ssid password:self.textPass.text];
+        IoTConfigure *configure = [[IoTConfigure alloc] initWithAirLink:self.ssid password:self.textPass.text wifiType:self.wifiType];
         [self.navigationController pushViewController:configure animated:YES];
     }
     else
@@ -99,6 +114,20 @@
 
 - (IBAction)onTap:(id)sender {
     [self.textPass resignFirstResponder];
+}
+
+- (IBAction)selectWifiType:(id)sender {
+    [self.textPass resignFirstResponder];
+    [self.actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex < self.wifiTypeArray.count) {
+        self.wifiType = buttonIndex;
+        [self.wifiSelectBtn setTitle:[self.wifiTypeArray objectAtIndex:self.wifiType] forState:UIControlStateNormal];
+    }
+    [self.textPass becomeFirstResponder];
 }
 
 - (BOOL)IoTStepFrameShouldCancelStep {

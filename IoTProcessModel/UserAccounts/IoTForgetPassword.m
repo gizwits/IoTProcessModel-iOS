@@ -34,6 +34,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *textVC;
 @property (weak, nonatomic) IBOutlet UITextField *textPass;
 
+
+@property (weak, nonatomic) IBOutlet UITextField *imgTextVC;
+@property (weak, nonatomic) IBOutlet UIImageView *imgVC;
+@property (weak, nonatomic) IBOutlet UIButton *btnChange;
+@property (strong, nonatomic) NSString *validateToken;
+@property (strong, nonatomic) NSString *validateCaptchaId;
+
+@property (weak, nonatomic) IBOutlet UITextField *textUserMail;
+@property (weak, nonatomic) IBOutlet UIButton *btnQVCMail;
+
+
 //获取验证码按钮、确认按钮，等待重复获取验证码
 @property (weak, nonatomic) IBOutlet UIButton *btnQVC;
 @property (weak, nonatomic) IBOutlet UIButton *btnWVC;
@@ -88,11 +99,21 @@
 - (void)updateViews
 {
     self.textUser.enabled = !self.canQueryVerifyCode;
+    self.imgTextVC.alpha = !self.canQueryVerifyCode;
+    self.imgVC.alpha = !self.canQueryVerifyCode;
+    self.btnChange.alpha = !self.canQueryVerifyCode;
     self.btnQVC.alpha = !self.canQueryVerifyCode;
+    
+    self.textUserMail.alpha = !self.canQueryVerifyCode;
+    self.btnQVCMail.alpha = !self.canQueryVerifyCode;
+    
+//    self.btnQVC.alpha = !self.canQueryVerifyCode;
     self.btnWVC.alpha = self.canQueryVerifyCode;
     self.btnOK.alpha = self.canQueryVerifyCode;
     self.textVC.alpha = self.canQueryVerifyCode;
     self.textPass.alpha = self.canQueryVerifyCode;
+    
+    [self getimgVerifyCode];
 }
 
 #pragma mark 60 seconds countdown for verify code
@@ -109,7 +130,7 @@
     NSString *title = @"重新获取";
     if(self.counter > 0)
     {
-        title = [NSString stringWithFormat:@"%i秒后重新获取", self.counter];
+        title = [NSString stringWithFormat:@"%is后重新获取", self.counter];
         [self.btnWVC setTitle:title forState:UIControlStateDisabled];
     }
     else
@@ -143,25 +164,68 @@
     }
 }
 
+- (void)getimgVerifyCode {
+    self.imgTextVC.text = @"";
+    ProcessModel.hud.labelText = @"获取图片验证码...";
+    [ProcessModel.hud show:YES];
+    [[XPGWifiSDK sharedInstance] getCaptchaCode:ProcessModel.appSecret];
+    [self resignFirstResponderFromView];
+}
+
+- (void) resignFirstResponderFromView{
+    [self.textUser resignFirstResponder];
+    [self.imgTextVC resignFirstResponder];
+    [self.textUserMail resignFirstResponder];
+}
+
 #pragma mark - Action
+- (IBAction)backToFirstSetp {
+    self.imgTextVC.text = @"";
+    self.canQueryVerifyCode = NO;
+}
+
+- (IBAction)onChangeimgVerifyCode:(id)sender {
+    [self getimgVerifyCode];
+}
 - (IBAction)onQueryVerifyCode:(id)sender {
+    [self resignFirstResponderFromView];
+    
+    if (self.imgVC.image == nil) {
+        [self getimgVerifyCode];
+        return;
+    }
+    
     if([ProcessModel validatePhone:self.textUser.text])
     {
-        isMail = NO;
-        ProcessModel.hud.labelText = @"正在请求验证码，请稍候...";
-        [ProcessModel.hud show:YES];
-        [[XPGWifiSDK sharedInstance] requestSendVerifyCode:self.textUser.text];
+        if (self.imgTextVC.text.length != 4) {
+            [[[UIAlertView alloc] initWithTitle:@"提示" message:@"验证码填写有误" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+        }
+        else {
+            isMail = NO;
+            ProcessModel.hud.labelText = @"正在请求验证码，请稍候...";
+            [ProcessModel.hud show:YES];
+            [[XPGWifiSDK sharedInstance] requestSendPhoneSMSCode:self.validateToken captchaId:self.validateCaptchaId captchaCode:self.imgTextVC.text phone:self.textUser.text];
+        }
     }
-    else if([ProcessModel validateEmail:self.textUser.text])
+    else
+    {
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"手机号不正确，请重新输入" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+    }
+}
+
+- (IBAction)onQueryVerifyCodeMail:(id)sender {
+    [self resignFirstResponderFromView];
+
+    if([ProcessModel validateEmail:self.textUserMail.text])
     {
         isMail = YES;
         ProcessModel.hud.labelText = @"请稍候...";
         [ProcessModel.hud show:YES];
-        [[XPGWifiSDK sharedInstance] changeUserPasswordByEmail:self.textUser.text];
+        [[XPGWifiSDK sharedInstance] changeUserPasswordByEmail:self.textUserMail.text];
     }
     else
     {
-        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"用户名不正确，请重新输入" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"邮箱地址不正确，请重新输入" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
     }
 }
 
@@ -213,6 +277,66 @@
 }
 
 #pragma mark XPGWifiSDK delegate
+- (void)wifiSDK:(XPGWifiSDK *)wifiSDK didGetCaptchaCode:(NSError*)result token:(NSString*)token captchaId:(NSString *)captchaId captchaURL:(NSString*)captchaURL {
+    if (!result.code)
+    {
+        self.validateToken = token;
+        self.validateCaptchaId = captchaId;
+        
+        NSURL* url = [NSURL URLWithString:[captchaURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];//网络图片url
+        NSData* data = [NSData dataWithContentsOfURL:url];//获取网咯图片数据
+        NSLog(@"%@", captchaURL);
+        if(data!=nil)
+        {
+            UIImage *image = [[UIImage alloc] initWithData:data];//根据图片数据流构造image
+            self.imgVC.image = image;
+        }
+    }
+    else if(result.code == -20 || result.code == -25 || result.code == -27) {
+        [[[UIAlertView alloc] initWithTitle:@"" message:@"图片验证码获取失败: 网络未连接" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+        self.imgVC.image = nil;
+    }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"图片验证码获取失败: %ld", (long)result.code] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+        self.imgVC.image = nil;
+    }
+    [ProcessModel.hud hide:YES];
+    if (self.textUser.text.length == 0) {
+        [self.textUser becomeFirstResponder];
+    }
+    else {
+        [self.imgTextVC becomeFirstResponder];
+    }
+}
+- (void)wifiSDK:(XPGWifiSDK *)wifiSDK didRequestSendPhoneSMSCode:(NSError*)result {
+    if(result.code != 0)
+    {
+        //8:{"code":9,"msg":"同一手机号5分钟内重复提交相同的内容超过3次","detail":"同一个手机号 xxxxxxxxxxx 5分钟内重复提交相同的内容超过3次"}
+        NSLog(@"didRequestSendPhoneSMSCode: %@", result);
+        if (result.code == 9015) {
+            [[[UIAlertView alloc] initWithTitle:@"提示" message:@"图片验证码输入错误。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            [self getimgVerifyCode];
+        }
+        else if(result.code == -20 || result.code == -25 || result.code == -27) {
+            [[[UIAlertView alloc] initWithTitle:@"" message:@"网络未连接" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil] show];
+            self.imgVC.image = nil;
+        }
+        else {
+            [[[UIAlertView alloc] initWithTitle:@"提示" message:@"获取短信失败。" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
+            [self getimgVerifyCode];
+        }
+    }
+    else
+    {
+        
+        self.canQueryVerifyCode = YES;
+        self.textPass.text = @"";
+        self.textVC.text = @"";
+    }
+    
+    [ProcessModel.hud hide:YES];
+}
+/*
 - (void)XPGWifiSDK:(XPGWifiSDK *)wifiSDK didRequestSendVerifyCode:(NSNumber *)error errorMessage:(NSString *)errorMessage
 {
     if([error intValue] != 0)
@@ -227,9 +351,10 @@
     
     [ProcessModel.hud hide:YES];
 }
-
+*/
 - (void)XPGWifiSDK:(XPGWifiSDK *)wifiSDK didChangeUserPassword:(NSNumber *)error errorMessage:(NSString *)errorMessage
 {
+    [ProcessModel.hud hide:YES];
     int errorValue = [error intValue];
     if(errorValue)
     {
@@ -238,6 +363,8 @@
             case 9010:
                 message = @"验证码不正确";
                 break;
+            case 9005:
+                message = @"用户不存在";
             default:
                 break;
         }
@@ -254,13 +381,11 @@
         
         [[[UIAlertView alloc] initWithTitle:@"提示" message:message delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil] show];
     }
-    
-    [ProcessModel.hud hide:YES];
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    [self.navigationController popViewControllerAnimated:YES];
+//    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
