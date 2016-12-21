@@ -1,4 +1,24 @@
-IoTProcessModel，是公共开源项目基本流程的整合库。整合了登陆、注册、绑定、添加设备的流程，以及设备列表的整合。
+# IoTProcessModel
+
+	此公版开源IoTProcessModel已不再维护，机智云推出了物联开源框架，并提供了其他开源案例供参考。机智云公版开源App项目地址：
+
+ 	机智云物联开源框架iOS项目 https://github.com/gizwits/GizOpenSource_AppKit_iOS
+	机智云智能灯2代iOS项目 https://github.com/gizwits/Gizwits-SmartBuld_iOS
+	机智云Gokit的iOS项目 https://github.com/gizwits/gokit-ios
+	机智云Gokit的APICloud项目 https://github.com/gizwits/gokit_demo_in_apicloud
+
+	我们在机智云社区、QQ群提供技术支持，意见反馈渠道。机智云社区网址：http://club.gizwits.com/forum.php
+
+	QQ群：
+	G1机智云物联网云服务 104975951
+	G2机智云物联网云服务 491509598
+	G3机智云物联网云服务 287087942
+
+	意见反馈：http://form.mikecrm.com/s1ZJxj
+
+IoTProcessModel
+
+是公共开源项目基本流程的整合库。整合了登陆、注册、绑定、添加设备的流程，以及设备列表的整合。
 
 使用方法：
 
